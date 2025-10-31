@@ -36,6 +36,7 @@ python tests/run_tests.py
 - 在 VSCode 中使用 “运行扩展” 或安装打包好的 VSIX，即可启用 `C Bug Detector` 侧边栏。
 - 快捷键 `Ctrl+Alt+D`（macOS `Cmd+Alt+D`）或编辑器标题栏按钮可对当前文件运行检测。
 - 检测结果会同时出现在 *Problems* 面板与 `C Bug Detector` 视图，支持点击跳转、查看建议。
+- 已生成 VSIX 包 `frontend/vscode-extension/c-bug-detector-0.1.0.vsix`，可直接在 VSCode 中通过 “扩展”→“从 VSIX 安装...” 导入。
 
 ## GitHub 提交指引
 1. 在 GitHub 创建新的空仓库（例如 `c-bug-detector`）。

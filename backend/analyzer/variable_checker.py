@@ -35,6 +35,9 @@ class VariableUsageChecker(Checker):
         if list(cursor.get_children()):
             return []
 
+        if cursor.type.kind == load_clang().TypeKind.POINTER:
+            return []
+
         file_path, line, column = cursor_location(cursor)
         suggestion = Suggestion(
             title=f"在声明 `{cursor.spelling}` 时完成初始化",
@@ -84,6 +87,9 @@ class VariableUsageChecker(Checker):
 
                 name = node.spelling
                 if not name or name in assigned or name in reported:
+                    continue
+
+                if node.type.kind == load_clang().TypeKind.POINTER:
                     continue
 
                 file_path, line, column = cursor_location(node)

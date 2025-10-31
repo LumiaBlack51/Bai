@@ -1,0 +1,646 @@
+{
+  "generated_at": "2025-10-31T21:07:45.740411",
+  "sources": [
+    "C:\\MUST\\OneDrive - Macau University of Science and Technology\\SoftwareEngineering\\project\\1031\\tests\\data\\test_comprehensive_examples.c"
+  ],
+  "reports": [
+    {
+      "source": "C:\\MUST\\OneDrive - Macau University of Science and Technology\\SoftwareEngineering\\project\\1031\\tests\\data\\test_comprehensive_examples.c",
+      "issues": [
+        {
+          "category": "memory",
+          "severity": "error",
+          "message": "指针 `ptr1` 可能未初始化却被使用。",
+          "file": "C:\\MUST\\OneDrive - Macau University of Science and Technology\\SoftwareEngineering\\project\\1031\\tests\\data\\test_comprehensive_examples.c",
+          "line": 13,
+          "column": 5,
+          "suggestion": {
+            "title": "在使用 `ptr1` 前赋值有效地址",
+            "detail": "例如将其指向现有变量或动态分配的内存。"
+          }
+        },
+        {
+          "category": "memory",
+          "severity": "error",
+          "message": "指针 `double_ptr` 可能未初始化却被使用。",
+          "file": "C:\\MUST\\OneDrive - Macau University of Science and Technology\\SoftwareEngineering\\project\\1031\\tests\\data\\test_comprehensive_examples.c",
+          "line": 36,
+          "column": 5,
+          "suggestion": {
+            "title": "在使用 `double_ptr` 前赋值有效地址",
+            "detail": "例如将其指向现有变量或动态分配的内存。"
+          }
+        },
+        {
+          "category": "memory",
+          "severity": "error",
+          "message": "指针 `wild_param` 可能未初始化却被使用。",
+          "file": "C:\\MUST\\OneDrive - Macau University of Science and Technology\\SoftwareEngineering\\project\\1031\\tests\\data\\test_comprehensive_examples.c",
+          "line": 43,
+          "column": 21,
+          "suggestion": {
+            "title": "在使用 `wild_param` 前赋值有效地址",
+            "detail": "例如将其指向现有变量或动态分配的内存。"
+          }
+        },
+        {
+          "category": "memory",
+          "severity": "error",
+          "message": "指针 `cond_ptr` 可能未初始化却被使用。",
+          "file": "C:\\MUST\\OneDrive - Macau University of Science and Technology\\SoftwareEngineering\\project\\1031\\tests\\data\\test_comprehensive_examples.c",
+          "line": 54,
+          "column": 9,
+          "suggestion": {
+            "title": "在使用 `cond_ptr` 前赋值有效地址",
+            "detail": "例如将其指向现有变量或动态分配的内存。"
+          }
+        },
+        {
+          "category": "memory",
+          "severity": "error",
+          "message": "指针 `ptr2` 可能为空却被解引用。",
+          "file": "C:\\MUST\\OneDrive - Macau University of Science and Technology\\SoftwareEngineering\\project\\1031\\tests\\data\\test_comprehensive_examples.c",
+          "line": 109,
+          "column": 14,
+          "suggestion": {
+            "title": "在解引用 `ptr2` 前检查是否为空",
+            "detail": "例如: `if (ptr2 == NULL) { /* 错误处理 */ }`"
+          }
+        },
+        {
+          "category": "memory",
+          "severity": "error",
+          "message": "指针 `str2` 可能为空却被解引用。",
+          "file": "C:\\MUST\\OneDrive - Macau University of Science and Technology\\SoftwareEngineering\\project\\1031\\tests\\data\\test_comprehensive_examples.c",
+          "line": 110,
+          "column": 14,
+          "suggestion": {
+            "title": "在解引用 `str2` 前检查是否为空",
+            "detail": "例如: `if (str2 == NULL) { /* 错误处理 */ }`"
+          }
+        },
+        {
+          "category": "memory",
+          "severity": "error",
+          "message": "指针 `ptr3` 可能为空却被解引用。",
+          "file": "C:\\MUST\\OneDrive - Macau University of Science and Technology\\SoftwareEngineering\\project\\1031\\tests\\data\\test_comprehensive_examples.c",
+          "line": 122,
+          "column": 14,
+          "suggestion": {
+            "title": "在解引用 `ptr3` 前检查是否为空",
+            "detail": "例如: `if (ptr3 == NULL) { /* 错误处理 */ }`"
+          }
+        },
+        {
+          "category": "memory",
+          "severity": "error",
+          "message": "指针 `arr3` 可能为空却被解引用。",
+          "file": "C:\\MUST\\OneDrive - Macau University of Science and Technology\\SoftwareEngineering\\project\\1031\\tests\\data\\test_comprehensive_examples.c",
+          "line": 132,
+          "column": 14,
+          "suggestion": {
+            "title": "在解引用 `arr3` 前检查是否为空",
+            "detail": "例如: `if (arr3 == NULL) { /* 错误处理 */ }`"
+          }
+        },
+        {
+          "category": "memory",
+          "severity": "error",
+          "message": "指针 `ptr5` 可能为空却被解引用。",
+          "file": "C:\\MUST\\OneDrive - Macau University of Science and Technology\\SoftwareEngineering\\project\\1031\\tests\\data\\test_comprehensive_examples.c",
+          "line": 164,
+          "column": 14,
+          "suggestion": {
+            "title": "在解引用 `ptr5` 前检查是否为空",
+            "detail": "例如: `if (ptr5 == NULL) { /* 错误处理 */ }`"
+          }
+        },
+        {
+          "category": "memory",
+          "severity": "error",
+          "message": "指针 `ptr6` 可能为空却被解引用。",
+          "file": "C:\\MUST\\OneDrive - Macau University of Science and Technology\\SoftwareEngineering\\project\\1031\\tests\\data\\test_comprehensive_examples.c",
+          "line": 182,
+          "column": 18,
+          "suggestion": {
+            "title": "在解引用 `ptr6` 前检查是否为空",
+            "detail": "例如: `if (ptr6 == NULL) { /* 错误处理 */ }`"
+          }
+        },
+        {
+          "category": "memory",
+          "severity": "error",
+          "message": "指针 `ptr1` 可能未初始化却被使用。",
+          "file": "C:\\MUST\\OneDrive - Macau University of Science and Technology\\SoftwareEngineering\\project\\1031\\tests\\data\\test_comprehensive_examples.c",
+          "line": 278,
+          "column": 5,
+          "suggestion": {
+            "title": "在使用 `ptr1` 前赋值有效地址",
+            "detail": "例如将其指向现有变量或动态分配的内存。"
+          }
+        },
+        {
+          "category": "memory",
+          "severity": "error",
+          "message": "指针 `ptr2` 可能为空却被解引用。",
+          "file": "C:\\MUST\\OneDrive - Macau University of Science and Technology\\SoftwareEngineering\\project\\1031\\tests\\data\\test_comprehensive_examples.c",
+          "line": 290,
+          "column": 5,
+          "suggestion": {
+            "title": "在解引用 `ptr2` 前检查是否为空",
+            "detail": "例如: `if (ptr2 == NULL) { /* 错误处理 */ }`"
+          }
+        },
+        {
+          "category": "memory",
+          "severity": "error",
+          "message": "指针 `ptr3` 可能未初始化却被使用。",
+          "file": "C:\\MUST\\OneDrive - Macau University of Science and Technology\\SoftwareEngineering\\project\\1031\\tests\\data\\test_comprehensive_examples.c",
+          "line": 302,
+          "column": 20,
+          "suggestion": {
+            "title": "在使用 `ptr3` 前赋值有效地址",
+            "detail": "例如将其指向现有变量或动态分配的内存。"
+          }
+        },
+        {
+          "category": "memory",
+          "severity": "error",
+          "message": "指针 `str3` 可能未初始化却被使用。",
+          "file": "C:\\MUST\\OneDrive - Macau University of Science and Technology\\SoftwareEngineering\\project\\1031\\tests\\data\\test_comprehensive_examples.c",
+          "line": 305,
+          "column": 17,
+          "suggestion": {
+            "title": "在使用 `str3` 前赋值有效地址",
+            "detail": "例如将其指向现有变量或动态分配的内存。"
+          }
+        },
+        {
+          "category": "memory",
+          "severity": "error",
+          "message": "指针 `ptr4` 可能为空却被解引用。",
+          "file": "C:\\MUST\\OneDrive - Macau University of Science and Technology\\SoftwareEngineering\\project\\1031\\tests\\data\\test_comprehensive_examples.c",
+          "line": 311,
+          "column": 20,
+          "suggestion": {
+            "title": "在解引用 `ptr4` 前检查是否为空",
+            "detail": "例如: `if (ptr4 == NULL) { /* 错误处理 */ }`"
+          }
+        },
+        {
+          "category": "memory",
+          "severity": "error",
+          "message": "指针 `str4` 可能为空却被解引用。",
+          "file": "C:\\MUST\\OneDrive - Macau University of Science and Technology\\SoftwareEngineering\\project\\1031\\tests\\data\\test_comprehensive_examples.c",
+          "line": 314,
+          "column": 17,
+          "suggestion": {
+            "title": "在解引用 `str4` 前检查是否为空",
+            "detail": "例如: `if (str4 == NULL) { /* 错误处理 */ }`"
+          }
+        },
+        {
+          "category": "memory",
+          "severity": "error",
+          "message": "指针 `ptr7` 可能为空却被解引用。",
+          "file": "C:\\MUST\\OneDrive - Macau University of Science and Technology\\SoftwareEngineering\\project\\1031\\tests\\data\\test_comprehensive_examples.c",
+          "line": 331,
+          "column": 14,
+          "suggestion": {
+            "title": "在解引用 `ptr7` 前检查是否为空",
+            "detail": "例如: `if (ptr7 == NULL) { /* 错误处理 */ }`"
+          }
+        },
+        {
+          "category": "stdlib",
+          "severity": "error",
+          "message": "`printf` 参数数量与格式化字符串不匹配。",
+          "file": "C:\\MUST\\OneDrive - Macau University of Science and Technology\\SoftwareEngineering\\project\\1031\\tests\\data\\test_comprehensive_examples.c",
+          "line": 343,
+          "column": 5,
+          "suggestion": {
+            "title": "核对格式化字符串与参数数量",
+            "detail": "`printf` 需要 3 个参数，但当前传入 2 个。"
+          }
+        },
+        {
+          "category": "stdlib",
+          "severity": "error",
+          "message": "`printf` 参数数量与格式化字符串不匹配。",
+          "file": "C:\\MUST\\OneDrive - Macau University of Science and Technology\\SoftwareEngineering\\project\\1031\\tests\\data\\test_comprehensive_examples.c",
+          "line": 349,
+          "column": 5,
+          "suggestion": {
+            "title": "核对格式化字符串与参数数量",
+            "detail": "`printf` 需要 4 个参数，但当前传入 3 个。"
+          }
+        },
+        {
+          "category": "stdlib",
+          "severity": "error",
+          "message": "`printf` 参数数量与格式化字符串不匹配。",
+          "file": "C:\\MUST\\OneDrive - Macau University of Science and Technology\\SoftwareEngineering\\project\\1031\\tests\\data\\test_comprehensive_examples.c",
+          "line": 354,
+          "column": 5,
+          "suggestion": {
+            "title": "核对格式化字符串与参数数量",
+            "detail": "`printf` 需要 1 个参数，但当前传入 2 个。"
+          }
+        },
+        {
+          "category": "memory",
+          "severity": "error",
+          "message": "指针 `ptr1` 可能为空却被解引用。",
+          "file": "C:\\MUST\\OneDrive - Macau University of Science and Technology\\SoftwareEngineering\\project\\1031\\tests\\data\\test_comprehensive_examples.c",
+          "line": 464,
+          "column": 10,
+          "suggestion": {
+            "title": "在解引用 `ptr1` 前检查是否为空",
+            "detail": "例如: `if (ptr1 == NULL) { /* 错误处理 */ }`"
+          }
+        },
+        {
+          "category": "memory",
+          "severity": "error",
+          "message": "指针 `ptr1` 在调用 `free` 后仍被使用，可能触发 Use-After-Free。",
+          "file": "C:\\MUST\\OneDrive - Macau University of Science and Technology\\SoftwareEngineering\\project\\1031\\tests\\data\\test_comprehensive_examples.c",
+          "line": 465,
+          "column": 20,
+          "suggestion": {
+            "title": "避免对 `ptr1` 在释放后继续解引用",
+            "detail": "释放内存后应立即将指针置为 NULL 或重新指向有效区域。"
+          }
+        },
+        {
+          "category": "memory",
+          "severity": "error",
+          "message": "指针 `ptr2` 可能为空却被解引用。",
+          "file": "C:\\MUST\\OneDrive - Macau University of Science and Technology\\SoftwareEngineering\\project\\1031\\tests\\data\\test_comprehensive_examples.c",
+          "line": 472,
+          "column": 10,
+          "suggestion": {
+            "title": "在解引用 `ptr2` 前检查是否为空",
+            "detail": "例如: `if (ptr2 == NULL) { /* 错误处理 */ }`"
+          }
+        },
+        {
+          "category": "memory",
+          "severity": "error",
+          "message": "指针 `ptr2` 在调用 `free` 后仍被使用，可能触发 Use-After-Free。",
+          "file": "C:\\MUST\\OneDrive - Macau University of Science and Technology\\SoftwareEngineering\\project\\1031\\tests\\data\\test_comprehensive_examples.c",
+          "line": 474,
+          "column": 24,
+          "suggestion": {
+            "title": "避免对 `ptr2` 在释放后继续解引用",
+            "detail": "释放内存后应立即将指针置为 NULL 或重新指向有效区域。"
+          }
+        },
+        {
+          "category": "memory",
+          "severity": "error",
+          "message": "指针 `ptr3` 可能为空却被解引用。",
+          "file": "C:\\MUST\\OneDrive - Macau University of Science and Technology\\SoftwareEngineering\\project\\1031\\tests\\data\\test_comprehensive_examples.c",
+          "line": 480,
+          "column": 10,
+          "suggestion": {
+            "title": "在解引用 `ptr3` 前检查是否为空",
+            "detail": "例如: `if (ptr3 == NULL) { /* 错误处理 */ }`"
+          }
+        },
+        {
+          "category": "memory",
+          "severity": "error",
+          "message": "指针 `ptr3` 在调用 `free` 后仍被使用，可能触发 Use-After-Free。",
+          "file": "C:\\MUST\\OneDrive - Macau University of Science and Technology\\SoftwareEngineering\\project\\1031\\tests\\data\\test_comprehensive_examples.c",
+          "line": 481,
+          "column": 5,
+          "suggestion": {
+            "title": "避免对 `ptr3` 在释放后继续解引用",
+            "detail": "释放内存后应立即将指针置为 NULL 或重新指向有效区域。"
+          }
+        },
+        {
+          "category": "memory",
+          "severity": "error",
+          "message": "指针 `ptr4` 可能为空却被解引用。",
+          "file": "C:\\MUST\\OneDrive - Macau University of Science and Technology\\SoftwareEngineering\\project\\1031\\tests\\data\\test_comprehensive_examples.c",
+          "line": 486,
+          "column": 10,
+          "suggestion": {
+            "title": "在解引用 `ptr4` 前检查是否为空",
+            "detail": "例如: `if (ptr4 == NULL) { /* 错误处理 */ }`"
+          }
+        },
+        {
+          "category": "memory",
+          "severity": "error",
+          "message": "指针 `ptr4` 在调用 `free` 后仍被使用，可能触发 Use-After-Free。",
+          "file": "C:\\MUST\\OneDrive - Macau University of Science and Technology\\SoftwareEngineering\\project\\1031\\tests\\data\\test_comprehensive_examples.c",
+          "line": 487,
+          "column": 9,
+          "suggestion": {
+            "title": "避免对 `ptr4` 在释放后继续解引用",
+            "detail": "释放内存后应立即将指针置为 NULL 或重新指向有效区域。"
+          }
+        },
+        {
+          "category": "memory",
+          "severity": "error",
+          "message": "指针 `ptr5` 可能为空却被解引用。",
+          "file": "C:\\MUST\\OneDrive - Macau University of Science and Technology\\SoftwareEngineering\\project\\1031\\tests\\data\\test_comprehensive_examples.c",
+          "line": 494,
+          "column": 10,
+          "suggestion": {
+            "title": "在解引用 `ptr5` 前检查是否为空",
+            "detail": "例如: `if (ptr5 == NULL) { /* 错误处理 */ }`"
+          }
+        },
+        {
+          "category": "memory",
+          "severity": "error",
+          "message": "指针 `ptr5` 可能被重复释放 (double free)。",
+          "file": "C:\\MUST\\OneDrive - Macau University of Science and Technology\\SoftwareEngineering\\project\\1031\\tests\\data\\test_comprehensive_examples.c",
+          "line": 495,
+          "column": 10,
+          "suggestion": {
+            "title": "确保每块内存仅释放一次",
+            "detail": "可在释放后将指针赋值为 NULL，避免重复释放。"
+          }
+        },
+        {
+          "category": "memory",
+          "severity": "error",
+          "message": "指针 `ptr5` 可能为空却被解引用。",
+          "file": "C:\\MUST\\OneDrive - Macau University of Science and Technology\\SoftwareEngineering\\project\\1031\\tests\\data\\test_comprehensive_examples.c",
+          "line": 495,
+          "column": 10,
+          "suggestion": {
+            "title": "在解引用 `ptr5` 前检查是否为空",
+            "detail": "例如: `if (ptr5 == NULL) { /* 错误处理 */ }`"
+          }
+        },
+        {
+          "category": "memory",
+          "severity": "warning",
+          "message": "函数 `test_memory_leak` 中分配次数(3)多于释放次数(0)，可能存在内存泄漏。",
+          "file": "C:\\MUST\\OneDrive - Macau University of Science and Technology\\SoftwareEngineering\\project\\1031\\tests\\data\\test_comprehensive_examples.c",
+          "line": 79,
+          "column": 1,
+          "suggestion": {
+            "title": "为每一次动态分配配对调用 free",
+            "detail": "考虑使用 goto/清理块或智能指针样式封装确保释放。"
+          }
+        },
+        {
+          "category": "memory",
+          "severity": "warning",
+          "message": "函数 `test_partial_leak` 中分配次数(3)多于释放次数(2)，可能存在内存泄漏。",
+          "file": "C:\\MUST\\OneDrive - Macau University of Science and Technology\\SoftwareEngineering\\project\\1031\\tests\\data\\test_comprehensive_examples.c",
+          "line": 115,
+          "column": 1,
+          "suggestion": {
+            "title": "为每一次动态分配配对调用 free",
+            "detail": "考虑使用 goto/清理块或智能指针样式封装确保释放。"
+          }
+        },
+        {
+          "category": "memory",
+          "severity": "warning",
+          "message": "函数 `test_realloc_leak` 中分配次数(2)多于释放次数(0)，可能存在内存泄漏。",
+          "file": "C:\\MUST\\OneDrive - Macau University of Science and Technology\\SoftwareEngineering\\project\\1031\\tests\\data\\test_comprehensive_examples.c",
+          "line": 137,
+          "column": 1,
+          "suggestion": {
+            "title": "为每一次动态分配配对调用 free",
+            "detail": "考虑使用 goto/清理块或智能指针样式封装确保释放。"
+          }
+        },
+        {
+          "category": "memory",
+          "severity": "warning",
+          "message": "函数 `helper_function` 中分配次数(1)多于释放次数(0)，可能存在内存泄漏。",
+          "file": "C:\\MUST\\OneDrive - Macau University of Science and Technology\\SoftwareEngineering\\project\\1031\\tests\\data\\test_comprehensive_examples.c",
+          "line": 152,
+          "column": 1,
+          "suggestion": {
+            "title": "为每一次动态分配配对调用 free",
+            "detail": "考虑使用 goto/清理块或智能指针样式封装确保释放。"
+          }
+        },
+        {
+          "category": "memory",
+          "severity": "warning",
+          "message": "调用 `helper_function` 可能引入未释放的内存。",
+          "file": "C:\\MUST\\OneDrive - Macau University of Science and Technology\\SoftwareEngineering\\project\\1031\\tests\\data\\test_comprehensive_examples.c",
+          "line": 167,
+          "column": 9,
+          "suggestion": {
+            "title": "在调用后释放被分配的资源",
+            "detail": "函数 `helper_function` 已被推断可能泄漏动态内存，调用后请确认资源释放。"
+          }
+        },
+        {
+          "category": "memory",
+          "severity": "warning",
+          "message": "函数 `test_conditional_free` 中分配次数(2)多于释放次数(1)，可能存在内存泄漏。",
+          "file": "C:\\MUST\\OneDrive - Macau University of Science and Technology\\SoftwareEngineering\\project\\1031\\tests\\data\\test_comprehensive_examples.c",
+          "line": 172,
+          "column": 1,
+          "suggestion": {
+            "title": "为每一次动态分配配对调用 free",
+            "detail": "考虑使用 goto/清理块或智能指针样式封装确保释放。"
+          }
+        },
+        {
+          "category": "control-flow",
+          "severity": "warning",
+          "message": "循环条件恒为真，可能导致死循环。",
+          "file": "C:\\MUST\\OneDrive - Macau University of Science and Technology\\SoftwareEngineering\\project\\1031\\tests\\data\\test_comprehensive_examples.c",
+          "line": 364,
+          "column": 5,
+          "suggestion": {
+            "title": "为循环添加退出条件或 break",
+            "detail": "确保循环条件可以变为假，或在循环体内加入跳出逻辑。"
+          }
+        },
+        {
+          "category": "control-flow",
+          "severity": "warning",
+          "message": "循环条件恒为真，可能导致死循环。",
+          "file": "C:\\MUST\\OneDrive - Macau University of Science and Technology\\SoftwareEngineering\\project\\1031\\tests\\data\\test_comprehensive_examples.c",
+          "line": 370,
+          "column": 5,
+          "suggestion": {
+            "title": "为循环添加退出条件或 break",
+            "detail": "确保循环条件可以变为假，或在循环体内加入跳出逻辑。"
+          }
+        },
+        {
+          "category": "control-flow",
+          "severity": "warning",
+          "message": "循环条件恒为真，可能导致死循环。",
+          "file": "C:\\MUST\\OneDrive - Macau University of Science and Technology\\SoftwareEngineering\\project\\1031\\tests\\data\\test_comprehensive_examples.c",
+          "line": 377,
+          "column": 5,
+          "suggestion": {
+            "title": "为循环添加退出条件或 break",
+            "detail": "确保循环条件可以变为假，或在循环体内加入跳出逻辑。"
+          }
+        },
+        {
+          "category": "control-flow",
+          "severity": "warning",
+          "message": "循环条件恒为真，可能导致死循环。",
+          "file": "C:\\MUST\\OneDrive - Macau University of Science and Technology\\SoftwareEngineering\\project\\1031\\tests\\data\\test_comprehensive_examples.c",
+          "line": 384,
+          "column": 5,
+          "suggestion": {
+            "title": "为循环添加退出条件或 break",
+            "detail": "确保循环条件可以变为假，或在循环体内加入跳出逻辑。"
+          }
+        },
+        {
+          "category": "control-flow",
+          "severity": "warning",
+          "message": "循环条件恒为真，可能导致死循环。",
+          "file": "C:\\MUST\\OneDrive - Macau University of Science and Technology\\SoftwareEngineering\\project\\1031\\tests\\data\\test_comprehensive_examples.c",
+          "line": 390,
+          "column": 5,
+          "suggestion": {
+            "title": "为循环添加退出条件或 break",
+            "detail": "确保循环条件可以变为假，或在循环体内加入跳出逻辑。"
+          }
+        },
+        {
+          "category": "control-flow",
+          "severity": "warning",
+          "message": "循环条件恒为真，可能导致死循环。",
+          "file": "C:\\MUST\\OneDrive - Macau University of Science and Technology\\SoftwareEngineering\\project\\1031\\tests\\data\\test_comprehensive_examples.c",
+          "line": 396,
+          "column": 5,
+          "suggestion": {
+            "title": "为循环添加退出条件或 break",
+            "detail": "确保循环条件可以变为假，或在循环体内加入跳出逻辑。"
+          }
+        },
+        {
+          "category": "control-flow",
+          "severity": "warning",
+          "message": "循环条件恒为真，可能导致死循环。",
+          "file": "C:\\MUST\\OneDrive - Macau University of Science and Technology\\SoftwareEngineering\\project\\1031\\tests\\data\\test_comprehensive_examples.c",
+          "line": 422,
+          "column": 5,
+          "suggestion": {
+            "title": "为循环添加退出条件或 break",
+            "detail": "确保循环条件可以变为假，或在循环体内加入跳出逻辑。"
+          }
+        },
+        {
+          "category": "control-flow",
+          "severity": "warning",
+          "message": "循环条件恒为真，可能导致死循环。",
+          "file": "C:\\MUST\\OneDrive - Macau University of Science and Technology\\SoftwareEngineering\\project\\1031\\tests\\data\\test_comprehensive_examples.c",
+          "line": 437,
+          "column": 5,
+          "suggestion": {
+            "title": "为循环添加退出条件或 break",
+            "detail": "确保循环条件可以变为假，或在循环体内加入跳出逻辑。"
+          }
+        },
+        {
+          "category": "control-flow",
+          "severity": "warning",
+          "message": "循环条件恒为真，可能导致死循环。",
+          "file": "C:\\MUST\\OneDrive - Macau University of Science and Technology\\SoftwareEngineering\\project\\1031\\tests\\data\\test_comprehensive_examples.c",
+          "line": 448,
+          "column": 5,
+          "suggestion": {
+            "title": "为循环添加退出条件或 break",
+            "detail": "确保循环条件可以变为假，或在循环体内加入跳出逻辑。"
+          }
+        },
+        {
+          "category": "memory",
+          "severity": "warning",
+          "message": "调用 `test_memory_leak` 可能引入未释放的内存。",
+          "file": "C:\\MUST\\OneDrive - Macau University of Science and Technology\\SoftwareEngineering\\project\\1031\\tests\\data\\test_comprehensive_examples.c",
+          "line": 509,
+          "column": 5,
+          "suggestion": {
+            "title": "在调用后释放被分配的资源",
+            "detail": "函数 `test_memory_leak` 已被推断可能泄漏动态内存，调用后请确认资源释放。"
+          }
+        },
+        {
+          "category": "memory",
+          "severity": "warning",
+          "message": "调用 `test_partial_leak` 可能引入未释放的内存。",
+          "file": "C:\\MUST\\OneDrive - Macau University of Science and Technology\\SoftwareEngineering\\project\\1031\\tests\\data\\test_comprehensive_examples.c",
+          "line": 511,
+          "column": 5,
+          "suggestion": {
+            "title": "在调用后释放被分配的资源",
+            "detail": "函数 `test_partial_leak` 已被推断可能泄漏动态内存，调用后请确认资源释放。"
+          }
+        },
+        {
+          "category": "memory",
+          "severity": "warning",
+          "message": "调用 `test_realloc_leak` 可能引入未释放的内存。",
+          "file": "C:\\MUST\\OneDrive - Macau University of Science and Technology\\SoftwareEngineering\\project\\1031\\tests\\data\\test_comprehensive_examples.c",
+          "line": 512,
+          "column": 5,
+          "suggestion": {
+            "title": "在调用后释放被分配的资源",
+            "detail": "函数 `test_realloc_leak` 已被推断可能泄漏动态内存，调用后请确认资源释放。"
+          }
+        },
+        {
+          "category": "memory",
+          "severity": "warning",
+          "message": "调用 `test_conditional_free` 可能引入未释放的内存。",
+          "file": "C:\\MUST\\OneDrive - Macau University of Science and Technology\\SoftwareEngineering\\project\\1031\\tests\\data\\test_comprehensive_examples.c",
+          "line": 514,
+          "column": 5,
+          "suggestion": {
+            "title": "在调用后释放被分配的资源",
+            "detail": "函数 `test_conditional_free` 已被推断可能泄漏动态内存，调用后请确认资源释放。"
+          }
+        }
+      ],
+      "summary": {
+        "error": 31,
+        "warning": 19
+      }
+    }
+  ],
+  "raw_output": "文件: C:\\MUST\\OneDrive - Macau University of Science and Technology\\SoftwareEngineering\\project\\1031\\tests\\data\\test_comprehensive_examples.c\n统计: error=31, warning=19\n  [ERROR][memory] C:\\MUST\\OneDrive - Macau University of Science and Technology\\SoftwareEngineering\\project\\1031\\tests\\data\\test_comprehensive_examples.c:13:5: 指针 `ptr1` 可能未初始化却被使用。\n    ↳ 建议: 在使用 `ptr1` 前赋值有效地址\n       例如将其指向现有变量或动态分配的内存。\n  [ERROR][memory] C:\\MUST\\OneDrive - Macau University of Science and Technology\\SoftwareEngineering\\project\\1031\\tests\\data\\test_comprehensive_examples.c:36:5: 指针 `double_ptr` 可能未初始化却被使用。\n    ↳ 建议: 在使用 `double_ptr` 前赋值有效地址\n       例如将其指向现有变量或动态分配的内存。\n  [ERROR][memory] C:\\MUST\\OneDrive - Macau University of Science and Technology\\SoftwareEngineering\\project\\1031\\tests\\data\\test_comprehensive_examples.c:43:21: 指针 `wild_param` 可能未初始化却被使用。\n    ↳ 建议: 在使用 `wild_param` 前赋值有效地址\n       例如将其指向现有变量或动态分配的内存。\n  [ERROR][memory] C:\\MUST\\OneDrive - Macau University of Science and Technology\\SoftwareEngineering\\project\\1031\\tests\\data\\test_comprehensive_examples.c:54:9: 指针 `cond_ptr` 可能未初始化却被使用。\n    ↳ 建议: 在使用 `cond_ptr` 前赋值有效地址\n       例如将其指向现有变量或动态分配的内存。\n  [ERROR][memory] C:\\MUST\\OneDrive - Macau University of Science and Technology\\SoftwareEngineering\\project\\1031\\tests\\data\\test_comprehensive_examples.c:109:14: 指针 `ptr2` 可能为空却被解引用。\n    ↳ 建议: 在解引用 `ptr2` 前检查是否为空\n       例如: `if (ptr2 == NULL) { /* 错误处理 */ }`\n  [ERROR][memory] C:\\MUST\\OneDrive - Macau University of Science and Technology\\SoftwareEngineering\\project\\1031\\tests\\data\\test_comprehensive_examples.c:110:14: 指针 `str2` 可能为空却被解引用。\n    ↳ 建议: 在解引用 `str2` 前检查是否为空\n       例如: `if (str2 == NULL) { /* 错误处理 */ }`\n  [ERROR][memory] C:\\MUST\\OneDrive - Macau University of Science and Technology\\SoftwareEngineering\\project\\1031\\tests\\data\\test_comprehensive_examples.c:122:14: 指针 `ptr3` 可能为空却被解引用。\n    ↳ 建议: 在解引用 `ptr3` 前检查是否为空\n       例如: `if (ptr3 == NULL) { /* 错误处理 */ }`\n  [ERROR][memory] C:\\MUST\\OneDrive - Macau University of Science and Technology\\SoftwareEngineering\\project\\1031\\tests\\data\\test_comprehensive_examples.c:132:14: 指针 `arr3` 可能为空却被解引用。\n    ↳ 建议: 在解引用 `arr3` 前检查是否为空\n       例如: `if (arr3 == NULL) { /* 错误处理 */ }`\n  [ERROR][memory] C:\\MUST\\OneDrive - Macau University of Science and Technology\\SoftwareEngineering\\project\\1031\\tests\\data\\test_comprehensive_examples.c:164:14: 指针 `ptr5` 可能为空却被解引用。\n    ↳ 建议: 在解引用 `ptr5` 前检查是否为空\n       例如: `if (ptr5 == NULL) { /* 错误处理 */ }`\n  [ERROR][memory] C:\\MUST\\OneDrive - Macau University of Science and Technology\\SoftwareEngineering\\project\\1031\\tests\\data\\test_comprehensive_examples.c:182:18: 指针 `ptr6` 可能为空却被解引用。\n    ↳ 建议: 在解引用 `ptr6` 前检查是否为空\n       例如: `if (ptr6 == NULL) { /* 错误处理 */ }`\n  [ERROR][memory] C:\\MUST\\OneDrive - Macau University of Science and Technology\\SoftwareEngineering\\project\\1031\\tests\\data\\test_comprehensive_examples.c:278:5: 指针 `ptr1` 可能未初始化却被使用。\n    ↳ 建议: 在使用 `ptr1` 前赋值有效地址\n       例如将其指向现有变量或动态分配的内存。\n  [ERROR][memory] C:\\MUST\\OneDrive - Macau University of Science and Technology\\SoftwareEngineering\\project\\1031\\tests\\data\\test_comprehensive_examples.c:290:5: 指针 `ptr2` 可能为空却被解引用。\n    ↳ 建议: 在解引用 `ptr2` 前检查是否为空\n       例如: `if (ptr2 == NULL) { /* 错误处理 */ }`\n  [ERROR][memory] C:\\MUST\\OneDrive - Macau University of Science and Technology\\SoftwareEngineering\\project\\1031\\tests\\data\\test_comprehensive_examples.c:302:20: 指针 `ptr3` 可能未初始化却被使用。\n    ↳ 建议: 在使用 `ptr3` 前赋值有效地址\n       例如将其指向现有变量或动态分配的内存。\n  [ERROR][memory] C:\\MUST\\OneDrive - Macau University of Science and Technology\\SoftwareEngineering\\project\\1031\\tests\\data\\test_comprehensive_examples.c:305:17: 指针 `str3` 可能未初始化却被使用。\n    ↳ 建议: 在使用 `str3` 前赋值有效地址\n       例如将其指向现有变量或动态分配的内存。\n  [ERROR][memory] C:\\MUST\\OneDrive - Macau University of Science and Technology\\SoftwareEngineering\\project\\1031\\tests\\data\\test_comprehensive_examples.c:311:20: 指针 `ptr4` 可能为空却被解引用。\n    ↳ 建议: 在解引用 `ptr4` 前检查是否为空\n       例如: `if (ptr4 == NULL) { /* 错误处理 */ }`\n  [ERROR][memory] C:\\MUST\\OneDrive - Macau University of Science and Technology\\SoftwareEngineering\\project\\1031\\tests\\data\\test_comprehensive_examples.c:314:17: 指针 `str4` 可能为空却被解引用。\n    ↳ 建议: 在解引用 `str4` 前检查是否为空\n       例如: `if (str4 == NULL) { /* 错误处理 */ }`\n  [ERROR][memory] C:\\MUST\\OneDrive - Macau University of Science and Technology\\SoftwareEngineering\\project\\1031\\tests\\data\\test_comprehensive_examples.c:331:14: 指针 `ptr7` 可能为空却被解引用。\n    ↳ 建议: 在解引用 `ptr7` 前检查是否为空\n       例如: `if (ptr7 == NULL) { /* 错误处理 */ }`\n  [ERROR][stdlib] C:\\MUST\\OneDrive - Macau University of Science and Technology\\SoftwareEngineering\\project\\1031\\tests\\data\\test_comprehensive_examples.c:343:5: `printf` 参数数量与格式化字符串不匹配。\n    ↳ 建议: 核对格式化字符串与参数数量\n       `printf` 需要 3 个参数，但当前传入 2 个。\n  [ERROR][stdlib] C:\\MUST\\OneDrive - Macau University of Science and Technology\\SoftwareEngineering\\project\\1031\\tests\\data\\test_comprehensive_examples.c:349:5: `printf` 参数数量与格式化字符串不匹配。\n    ↳ 建议: 核对格式化字符串与参数数量\n       `printf` 需要 4 个参数，但当前传入 3 个。\n  [ERROR][stdlib] C:\\MUST\\OneDrive - Macau University of Science and Technology\\SoftwareEngineering\\project\\1031\\tests\\data\\test_comprehensive_examples.c:354:5: `printf` 参数数量与格式化字符串不匹配。\n    ↳ 建议: 核对格式化字符串与参数数量\n       `printf` 需要 1 个参数，但当前传入 2 个。\n  [ERROR][memory] C:\\MUST\\OneDrive - Macau University of Science and Technology\\SoftwareEngineering\\project\\1031\\tests\\data\\test_comprehensive_examples.c:464:10: 指针 `ptr1` 可能为空却被解引用。\n    ↳ 建议: 在解引用 `ptr1` 前检查是否为空\n       例如: `if (ptr1 == NULL) { /* 错误处理 */ }`\n  [ERROR][memory] C:\\MUST\\OneDrive - Macau University of Science and Technology\\SoftwareEngineering\\project\\1031\\tests\\data\\test_comprehensive_examples.c:465:20: 指针 `ptr1` 在调用 `free` 后仍被使用，可能触发 Use-After-Free。\n    ↳ 建议: 避免对 `ptr1` 在释放后继续解引用\n       释放内存后应立即将指针置为 NULL 或重新指向有效区域。\n  [ERROR][memory] C:\\MUST\\OneDrive - Macau University of Science and Technology\\SoftwareEngineering\\project\\1031\\tests\\data\\test_comprehensive_examples.c:472:10: 指针 `ptr2` 可能为空却被解引用。\n    ↳ 建议: 在解引用 `ptr2` 前检查是否为空\n       例如: `if (ptr2 == NULL) { /* 错误处理 */ }`\n  [ERROR][memory] C:\\MUST\\OneDrive - Macau University of Science and Technology\\SoftwareEngineering\\project\\1031\\tests\\data\\test_comprehensive_examples.c:474:24: 指针 `ptr2` 在调用 `free` 后仍被使用，可能触发 Use-After-Free。\n    ↳ 建议: 避免对 `ptr2` 在释放后继续解引用\n       释放内存后应立即将指针置为 NULL 或重新指向有效区域。\n  [ERROR][memory] C:\\MUST\\OneDrive - Macau University of Science and Technology\\SoftwareEngineering\\project\\1031\\tests\\data\\test_comprehensive_examples.c:480:10: 指针 `ptr3` 可能为空却被解引用。\n    ↳ 建议: 在解引用 `ptr3` 前检查是否为空\n       例如: `if (ptr3 == NULL) { /* 错误处理 */ }`\n  [ERROR][memory] C:\\MUST\\OneDrive - Macau University of Science and Technology\\SoftwareEngineering\\project\\1031\\tests\\data\\test_comprehensive_examples.c:481:5: 指针 `ptr3` 在调用 `free` 后仍被使用，可能触发 Use-After-Free。\n    ↳ 建议: 避免对 `ptr3` 在释放后继续解引用\n       释放内存后应立即将指针置为 NULL 或重新指向有效区域。\n  [ERROR][memory] C:\\MUST\\OneDrive - Macau University of Science and Technology\\SoftwareEngineering\\project\\1031\\tests\\data\\test_comprehensive_examples.c:486:10: 指针 `ptr4` 可能为空却被解引用。\n    ↳ 建议: 在解引用 `ptr4` 前检查是否为空\n       例如: `if (ptr4 == NULL) { /* 错误处理 */ }`\n  [ERROR][memory] C:\\MUST\\OneDrive - Macau University of Science and Technology\\SoftwareEngineering\\project\\1031\\tests\\data\\test_comprehensive_examples.c:487:9: 指针 `ptr4` 在调用 `free` 后仍被使用，可能触发 Use-After-Free。\n    ↳ 建议: 避免对 `ptr4` 在释放后继续解引用\n       释放内存后应立即将指针置为 NULL 或重新指向有效区域。\n  [ERROR][memory] C:\\MUST\\OneDrive - Macau University of Science and Technology\\SoftwareEngineering\\project\\1031\\tests\\data\\test_comprehensive_examples.c:494:10: 指针 `ptr5` 可能为空却被解引用。\n    ↳ 建议: 在解引用 `ptr5` 前检查是否为空\n       例如: `if (ptr5 == NULL) { /* 错误处理 */ }`\n  [ERROR][memory] C:\\MUST\\OneDrive - Macau University of Science and Technology\\SoftwareEngineering\\project\\1031\\tests\\data\\test_comprehensive_examples.c:495:10: 指针 `ptr5` 可能被重复释放 (double free)。\n    ↳ 建议: 确保每块内存仅释放一次\n       可在释放后将指针赋值为 NULL，避免重复释放。\n  [ERROR][memory] C:\\MUST\\OneDrive - Macau University of Science and Technology\\SoftwareEngineering\\project\\1031\\tests\\data\\test_comprehensive_examples.c:495:10: 指针 `ptr5` 可能为空却被解引用。\n    ↳ 建议: 在解引用 `ptr5` 前检查是否为空\n       例如: `if (ptr5 == NULL) { /* 错误处理 */ }`\n  [WARNING][memory] C:\\MUST\\OneDrive - Macau University of Science and Technology\\SoftwareEngineering\\project\\1031\\tests\\data\\test_comprehensive_examples.c:79:1: 函数 `test_memory_leak` 中分配次数(3)多于释放次数(0)，可能存在内存泄漏。\n    ↳ 建议: 为每一次动态分配配对调用 free\n       考虑使用 goto/清理块或智能指针样式封装确保释放。\n  [WARNING][memory] C:\\MUST\\OneDrive - Macau University of Science and Technology\\SoftwareEngineering\\project\\1031\\tests\\data\\test_comprehensive_examples.c:115:1: 函数 `test_partial_leak` 中分配次数(3)多于释放次数(2)，可能存在内存泄漏。\n    ↳ 建议: 为每一次动态分配配对调用 free\n       考虑使用 goto/清理块或智能指针样式封装确保释放。\n  [WARNING][memory] C:\\MUST\\OneDrive - Macau University of Science and Technology\\SoftwareEngineering\\project\\1031\\tests\\data\\test_comprehensive_examples.c:137:1: 函数 `test_realloc_leak` 中分配次数(2)多于释放次数(0)，可能存在内存泄漏。\n    ↳ 建议: 为每一次动态分配配对调用 free\n       考虑使用 goto/清理块或智能指针样式封装确保释放。\n  [WARNING][memory] C:\\MUST\\OneDrive - Macau University of Science and Technology\\SoftwareEngineering\\project\\1031\\tests\\data\\test_comprehensive_examples.c:152:1: 函数 `helper_function` 中分配次数(1)多于释放次数(0)，可能存在内存泄漏。\n    ↳ 建议: 为每一次动态分配配对调用 free\n       考虑使用 goto/清理块或智能指针样式封装确保释放。\n  [WARNING][memory] C:\\MUST\\OneDrive - Macau University of Science and Technology\\SoftwareEngineering\\project\\1031\\tests\\data\\test_comprehensive_examples.c:167:9: 调用 `helper_function` 可能引入未释放的内存。\n    ↳ 建议: 在调用后释放被分配的资源\n       函数 `helper_function` 已被推断可能泄漏动态内存，调用后请确认资源释放。\n  [WARNING][memory] C:\\MUST\\OneDrive - Macau University of Science and Technology\\SoftwareEngineering\\project\\1031\\tests\\data\\test_comprehensive_examples.c:172:1: 函数 `test_conditional_free` 中分配次数(2)多于释放次数(1)，可能存在内存泄漏。\n    ↳ 建议: 为每一次动态分配配对调用 free\n       考虑使用 goto/清理块或智能指针样式封装确保释放。\n  [WARNING][control-flow] C:\\MUST\\OneDrive - Macau University of Science and Technology\\SoftwareEngineering\\project\\1031\\tests\\data\\test_comprehensive_examples.c:364:5: 循环条件恒为真，可能导致死循环。\n    ↳ 建议: 为循环添加退出条件或 break\n       确保循环条件可以变为假，或在循环体内加入跳出逻辑。\n  [WARNING][control-flow] C:\\MUST\\OneDrive - Macau University of Science and Technology\\SoftwareEngineering\\project\\1031\\tests\\data\\test_comprehensive_examples.c:370:5: 循环条件恒为真，可能导致死循环。\n    ↳ 建议: 为循环添加退出条件或 break\n       确保循环条件可以变为假，或在循环体内加入跳出逻辑。\n  [WARNING][control-flow] C:\\MUST\\OneDrive - Macau University of Science and Technology\\SoftwareEngineering\\project\\1031\\tests\\data\\test_comprehensive_examples.c:377:5: 循环条件恒为真，可能导致死循环。\n    ↳ 建议: 为循环添加退出条件或 break\n       确保循环条件可以变为假，或在循环体内加入跳出逻辑。\n  [WARNING][control-flow] C:\\MUST\\OneDrive - Macau University of Science and Technology\\SoftwareEngineering\\project\\1031\\tests\\data\\test_comprehensive_examples.c:384:5: 循环条件恒为真，可能导致死循环。\n    ↳ 建议: 为循环添加退出条件或 break\n       确保循环条件可以变为假，或在循环体内加入跳出逻辑。\n  [WARNING][control-flow] C:\\MUST\\OneDrive - Macau University of Science and Technology\\SoftwareEngineering\\project\\1031\\tests\\data\\test_comprehensive_examples.c:390:5: 循环条件恒为真，可能导致死循环。\n    ↳ 建议: 为循环添加退出条件或 break\n       确保循环条件可以变为假，或在循环体内加入跳出逻辑。\n  [WARNING][control-flow] C:\\MUST\\OneDrive - Macau University of Science and Technology\\SoftwareEngineering\\project\\1031\\tests\\data\\test_comprehensive_examples.c:396:5: 循环条件恒为真，可能导致死循环。\n    ↳ 建议: 为循环添加退出条件或 break\n       确保循环条件可以变为假，或在循环体内加入跳出逻辑。\n  [WARNING][control-flow] C:\\MUST\\OneDrive - Macau University of Science and Technology\\SoftwareEngineering\\project\\1031\\tests\\data\\test_comprehensive_examples.c:422:5: 循环条件恒为真，可能导致死循环。\n    ↳ 建议: 为循环添加退出条件或 break\n       确保循环条件可以变为假，或在循环体内加入跳出逻辑。\n  [WARNING][control-flow] C:\\MUST\\OneDrive - Macau University of Science and Technology\\SoftwareEngineering\\project\\1031\\tests\\data\\test_comprehensive_examples.c:437:5: 循环条件恒为真，可能导致死循环。\n    ↳ 建议: 为循环添加退出条件或 break\n       确保循环条件可以变为假，或在循环体内加入跳出逻辑。\n  [WARNING][control-flow] C:\\MUST\\OneDrive - Macau University of Science and Technology\\SoftwareEngineering\\project\\1031\\tests\\data\\test_comprehensive_examples.c:448:5: 循环条件恒为真，可能导致死循环。\n    ↳ 建议: 为循环添加退出条件或 break\n       确保循环条件可以变为假，或在循环体内加入跳出逻辑。\n  [WARNING][memory] C:\\MUST\\OneDrive - Macau University of Science and Technology\\SoftwareEngineering\\project\\1031\\tests\\data\\test_comprehensive_examples.c:509:5: 调用 `test_memory_leak` 可能引入未释放的内存。\n    ↳ 建议: 在调用后释放被分配的资源\n       函数 `test_memory_leak` 已被推断可能泄漏动态内存，调用后请确认资源释放。\n  [WARNING][memory] C:\\MUST\\OneDrive - Macau University of Science and Technology\\SoftwareEngineering\\project\\1031\\tests\\data\\test_comprehensive_examples.c:511:5: 调用 `test_partial_leak` 可能引入未释放的内存。\n    ↳ 建议: 在调用后释放被分配的资源\n       函数 `test_partial_leak` 已被推断可能泄漏动态内存，调用后请确认资源释放。\n  [WARNING][memory] C:\\MUST\\OneDrive - Macau University of Science and Technology\\SoftwareEngineering\\project\\1031\\tests\\data\\test_comprehensive_examples.c:512:5: 调用 `test_realloc_leak` 可能引入未释放的内存。\n    ↳ 建议: 在调用后释放被分配的资源\n       函数 `test_realloc_leak` 已被推断可能泄漏动态内存，调用后请确认资源释放。\n  [WARNING][memory] C:\\MUST\\OneDrive - Macau University of Science and Technology\\SoftwareEngineering\\project\\1031\\tests\\data\\test_comprehensive_examples.c:514:5: 调用 `test_conditional_free` 可能引入未释放的内存。\n    ↳ 建议: 在调用后释放被分配的资源\n       函数 `test_conditional_free` 已被推断可能泄漏动态内存，调用后请确认资源释放。",
+  "metrics": {
+    "total_issues": 50,
+    "true_positive": 3,
+    "false_positive": 47,
+    "false_negative": 2
+  },
+  "expected_reference": [
+    {
+      "category": "memory",
+      "line": 12
+    },
+    {
+      "category": "memory",
+      "line": 290
+    },
+    {
+      "category": "stdlib",
+      "line": 343
+    },
+    {
+      "category": "stdlib",
+      "line": 354
+    },
+    {
+      "category": "numeric",
+      "line": 364
+    }
+  ]
+}
