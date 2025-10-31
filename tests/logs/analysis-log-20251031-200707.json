@@ -1,0 +1,322 @@
+{
+  "generated_at": "2025-10-31T20:07:07.550885",
+  "sources": [
+    "C:\\MUST\\OneDrive - Macau University of Science and Technology\\SoftwareEngineering\\project\\1031\\tests\\data\\test_comprehensive_examples.c"
+  ],
+  "reports": [
+    {
+      "source": "C:\\MUST\\OneDrive - Macau University of Science and Technology\\SoftwareEngineering\\project\\1031\\tests\\data\\test_comprehensive_examples.c",
+      "issues": [
+        {
+          "category": "stdlib",
+          "severity": "error",
+          "message": "`printf` 参数数量与格式化字符串不匹配。",
+          "file": "C:\\MUST\\OneDrive - Macau University of Science and Technology\\SoftwareEngineering\\project\\1031\\tests\\data\\test_comprehensive_examples.c",
+          "line": 343,
+          "column": 5,
+          "suggestion": {
+            "title": "核对格式化字符串与参数数量",
+            "detail": "`printf` 需要 3 个参数，但当前传入 2 个。"
+          }
+        },
+        {
+          "category": "stdlib",
+          "severity": "error",
+          "message": "`printf` 参数数量与格式化字符串不匹配。",
+          "file": "C:\\MUST\\OneDrive - Macau University of Science and Technology\\SoftwareEngineering\\project\\1031\\tests\\data\\test_comprehensive_examples.c",
+          "line": 349,
+          "column": 5,
+          "suggestion": {
+            "title": "核对格式化字符串与参数数量",
+            "detail": "`printf` 需要 4 个参数，但当前传入 3 个。"
+          }
+        },
+        {
+          "category": "stdlib",
+          "severity": "error",
+          "message": "`printf` 参数数量与格式化字符串不匹配。",
+          "file": "C:\\MUST\\OneDrive - Macau University of Science and Technology\\SoftwareEngineering\\project\\1031\\tests\\data\\test_comprehensive_examples.c",
+          "line": 354,
+          "column": 5,
+          "suggestion": {
+            "title": "核对格式化字符串与参数数量",
+            "detail": "`printf` 需要 1 个参数，但当前传入 2 个。"
+          }
+        },
+        {
+          "category": "variable",
+          "severity": "warning",
+          "message": "变量 `ptr1` 可能在赋值前被使用。",
+          "file": "C:\\MUST\\OneDrive - Macau University of Science and Technology\\SoftwareEngineering\\project\\1031\\tests\\data\\test_comprehensive_examples.c",
+          "line": 13,
+          "column": 6,
+          "suggestion": {
+            "title": "在引用前检查变量赋值路径",
+            "detail": "可以通过初始化或在所有分支赋值来避免。"
+          }
+        },
+        {
+          "category": "variable",
+          "severity": "warning",
+          "message": "变量 `arr_ptr` 可能在赋值前被使用。",
+          "file": "C:\\MUST\\OneDrive - Macau University of Science and Technology\\SoftwareEngineering\\project\\1031\\tests\\data\\test_comprehensive_examples.c",
+          "line": 26,
+          "column": 5,
+          "suggestion": {
+            "title": "在引用前检查变量赋值路径",
+            "detail": "可以通过初始化或在所有分支赋值来避免。"
+          }
+        },
+        {
+          "category": "variable",
+          "severity": "warning",
+          "message": "变量 `str_ptr` 可能在赋值前被使用。",
+          "file": "C:\\MUST\\OneDrive - Macau University of Science and Technology\\SoftwareEngineering\\project\\1031\\tests\\data\\test_comprehensive_examples.c",
+          "line": 31,
+          "column": 5,
+          "suggestion": {
+            "title": "在引用前检查变量赋值路径",
+            "detail": "可以通过初始化或在所有分支赋值来避免。"
+          }
+        },
+        {
+          "category": "variable",
+          "severity": "warning",
+          "message": "变量 `double_ptr` 可能在赋值前被使用。",
+          "file": "C:\\MUST\\OneDrive - Macau University of Science and Technology\\SoftwareEngineering\\project\\1031\\tests\\data\\test_comprehensive_examples.c",
+          "line": 36,
+          "column": 7,
+          "suggestion": {
+            "title": "在引用前检查变量赋值路径",
+            "detail": "可以通过初始化或在所有分支赋值来避免。"
+          }
+        },
+        {
+          "category": "variable",
+          "severity": "warning",
+          "message": "变量 `wild_param` 可能在赋值前被使用。",
+          "file": "C:\\MUST\\OneDrive - Macau University of Science and Technology\\SoftwareEngineering\\project\\1031\\tests\\data\\test_comprehensive_examples.c",
+          "line": 43,
+          "column": 21,
+          "suggestion": {
+            "title": "在引用前检查变量赋值路径",
+            "detail": "可以通过初始化或在所有分支赋值来避免。"
+          }
+        },
+        {
+          "category": "variable",
+          "severity": "warning",
+          "message": "变量 `loop_ptr` 可能在赋值前被使用。",
+          "file": "C:\\MUST\\OneDrive - Macau University of Science and Technology\\SoftwareEngineering\\project\\1031\\tests\\data\\test_comprehensive_examples.c",
+          "line": 48,
+          "column": 9,
+          "suggestion": {
+            "title": "在引用前检查变量赋值路径",
+            "detail": "可以通过初始化或在所有分支赋值来避免。"
+          }
+        },
+        {
+          "category": "variable",
+          "severity": "warning",
+          "message": "变量 `cond_ptr` 可能在赋值前被使用。",
+          "file": "C:\\MUST\\OneDrive - Macau University of Science and Technology\\SoftwareEngineering\\project\\1031\\tests\\data\\test_comprehensive_examples.c",
+          "line": 54,
+          "column": 10,
+          "suggestion": {
+            "title": "在引用前检查变量赋值路径",
+            "detail": "可以通过初始化或在所有分支赋值来避免。"
+          }
+        },
+        {
+          "category": "memory",
+          "severity": "warning",
+          "message": "函数 `test_memory_leak` 中分配次数(3)多于释放次数(0)，可能存在内存泄漏。",
+          "file": "C:\\MUST\\OneDrive - Macau University of Science and Technology\\SoftwareEngineering\\project\\1031\\tests\\data\\test_comprehensive_examples.c",
+          "line": 79,
+          "column": 1,
+          "suggestion": {
+            "title": "为每一次动态分配配对调用 free",
+            "detail": "考虑使用 goto/清理块或智能指针样式封装确保释放。"
+          }
+        },
+        {
+          "category": "memory",
+          "severity": "warning",
+          "message": "函数 `test_partial_leak` 中分配次数(3)多于释放次数(2)，可能存在内存泄漏。",
+          "file": "C:\\MUST\\OneDrive - Macau University of Science and Technology\\SoftwareEngineering\\project\\1031\\tests\\data\\test_comprehensive_examples.c",
+          "line": 115,
+          "column": 1,
+          "suggestion": {
+            "title": "为每一次动态分配配对调用 free",
+            "detail": "考虑使用 goto/清理块或智能指针样式封装确保释放。"
+          }
+        },
+        {
+          "category": "memory",
+          "severity": "warning",
+          "message": "函数 `test_realloc_leak` 中分配次数(2)多于释放次数(0)，可能存在内存泄漏。",
+          "file": "C:\\MUST\\OneDrive - Macau University of Science and Technology\\SoftwareEngineering\\project\\1031\\tests\\data\\test_comprehensive_examples.c",
+          "line": 137,
+          "column": 1,
+          "suggestion": {
+            "title": "为每一次动态分配配对调用 free",
+            "detail": "考虑使用 goto/清理块或智能指针样式封装确保释放。"
+          }
+        },
+        {
+          "category": "memory",
+          "severity": "warning",
+          "message": "函数 `helper_function` 中分配次数(1)多于释放次数(0)，可能存在内存泄漏。",
+          "file": "C:\\MUST\\OneDrive - Macau University of Science and Technology\\SoftwareEngineering\\project\\1031\\tests\\data\\test_comprehensive_examples.c",
+          "line": 152,
+          "column": 1,
+          "suggestion": {
+            "title": "为每一次动态分配配对调用 free",
+            "detail": "考虑使用 goto/清理块或智能指针样式封装确保释放。"
+          }
+        },
+        {
+          "category": "memory",
+          "severity": "warning",
+          "message": "函数 `test_conditional_free` 中分配次数(2)多于释放次数(1)，可能存在内存泄漏。",
+          "file": "C:\\MUST\\OneDrive - Macau University of Science and Technology\\SoftwareEngineering\\project\\1031\\tests\\data\\test_comprehensive_examples.c",
+          "line": 172,
+          "column": 1,
+          "suggestion": {
+            "title": "为每一次动态分配配对调用 free",
+            "detail": "考虑使用 goto/清理块或智能指针样式封装确保释放。"
+          }
+        },
+        {
+          "category": "variable",
+          "severity": "warning",
+          "message": "变量 `ptr1` 可能在赋值前被使用。",
+          "file": "C:\\MUST\\OneDrive - Macau University of Science and Technology\\SoftwareEngineering\\project\\1031\\tests\\data\\test_comprehensive_examples.c",
+          "line": 278,
+          "column": 6,
+          "suggestion": {
+            "title": "在引用前检查变量赋值路径",
+            "detail": "可以通过初始化或在所有分支赋值来避免。"
+          }
+        },
+        {
+          "category": "variable",
+          "severity": "warning",
+          "message": "变量 `str1` 可能在赋值前被使用。",
+          "file": "C:\\MUST\\OneDrive - Macau University of Science and Technology\\SoftwareEngineering\\project\\1031\\tests\\data\\test_comprehensive_examples.c",
+          "line": 281,
+          "column": 5,
+          "suggestion": {
+            "title": "在引用前检查变量赋值路径",
+            "detail": "可以通过初始化或在所有分支赋值来避免。"
+          }
+        },
+        {
+          "category": "variable",
+          "severity": "warning",
+          "message": "变量 `arr1` 可能在赋值前被使用。",
+          "file": "C:\\MUST\\OneDrive - Macau University of Science and Technology\\SoftwareEngineering\\project\\1031\\tests\\data\\test_comprehensive_examples.c",
+          "line": 284,
+          "column": 5,
+          "suggestion": {
+            "title": "在引用前检查变量赋值路径",
+            "detail": "可以通过初始化或在所有分支赋值来避免。"
+          }
+        },
+        {
+          "category": "variable",
+          "severity": "warning",
+          "message": "变量 `ptr3` 可能在赋值前被使用。",
+          "file": "C:\\MUST\\OneDrive - Macau University of Science and Technology\\SoftwareEngineering\\project\\1031\\tests\\data\\test_comprehensive_examples.c",
+          "line": 302,
+          "column": 21,
+          "suggestion": {
+            "title": "在引用前检查变量赋值路径",
+            "detail": "可以通过初始化或在所有分支赋值来避免。"
+          }
+        },
+        {
+          "category": "variable",
+          "severity": "warning",
+          "message": "变量 `str3` 可能在赋值前被使用。",
+          "file": "C:\\MUST\\OneDrive - Macau University of Science and Technology\\SoftwareEngineering\\project\\1031\\tests\\data\\test_comprehensive_examples.c",
+          "line": 305,
+          "column": 17,
+          "suggestion": {
+            "title": "在引用前检查变量赋值路径",
+            "detail": "可以通过初始化或在所有分支赋值来避免。"
+          }
+        },
+        {
+          "category": "control-flow",
+          "severity": "warning",
+          "message": "循环条件恒为真，可能导致死循环。",
+          "file": "C:\\MUST\\OneDrive - Macau University of Science and Technology\\SoftwareEngineering\\project\\1031\\tests\\data\\test_comprehensive_examples.c",
+          "line": 364,
+          "column": 5,
+          "suggestion": {
+            "title": "为循环添加退出条件或 break",
+            "detail": "确保循环条件可以变为假，或在循环体内加入跳出逻辑。"
+          }
+        },
+        {
+          "category": "control-flow",
+          "severity": "warning",
+          "message": "循环条件恒为真，可能导致死循环。",
+          "file": "C:\\MUST\\OneDrive - Macau University of Science and Technology\\SoftwareEngineering\\project\\1031\\tests\\data\\test_comprehensive_examples.c",
+          "line": 370,
+          "column": 5,
+          "suggestion": {
+            "title": "为循环添加退出条件或 break",
+            "detail": "确保循环条件可以变为假，或在循环体内加入跳出逻辑。"
+          }
+        },
+        {
+          "category": "control-flow",
+          "severity": "warning",
+          "message": "循环条件恒为真，可能导致死循环。",
+          "file": "C:\\MUST\\OneDrive - Macau University of Science and Technology\\SoftwareEngineering\\project\\1031\\tests\\data\\test_comprehensive_examples.c",
+          "line": 437,
+          "column": 5,
+          "suggestion": {
+            "title": "为循环添加退出条件或 break",
+            "detail": "确保循环条件可以变为假，或在循环体内加入跳出逻辑。"
+          }
+        }
+      ],
+      "summary": {
+        "error": 3,
+        "warning": 20
+      }
+    }
+  ],
+  "raw_output": "文件: C:\\MUST\\OneDrive - Macau University of Science and Technology\\SoftwareEngineering\\project\\1031\\tests\\data\\test_comprehensive_examples.c\n统计: error=3, warning=20\n  [ERROR][stdlib] C:\\MUST\\OneDrive - Macau University of Science and Technology\\SoftwareEngineering\\project\\1031\\tests\\data\\test_comprehensive_examples.c:343:5: `printf` 参数数量与格式化字符串不匹配。\n    ↳ 建议: 核对格式化字符串与参数数量\n       `printf` 需要 3 个参数，但当前传入 2 个。\n  [ERROR][stdlib] C:\\MUST\\OneDrive - Macau University of Science and Technology\\SoftwareEngineering\\project\\1031\\tests\\data\\test_comprehensive_examples.c:349:5: `printf` 参数数量与格式化字符串不匹配。\n    ↳ 建议: 核对格式化字符串与参数数量\n       `printf` 需要 4 个参数，但当前传入 3 个。\n  [ERROR][stdlib] C:\\MUST\\OneDrive - Macau University of Science and Technology\\SoftwareEngineering\\project\\1031\\tests\\data\\test_comprehensive_examples.c:354:5: `printf` 参数数量与格式化字符串不匹配。\n    ↳ 建议: 核对格式化字符串与参数数量\n       `printf` 需要 1 个参数，但当前传入 2 个。\n  [WARNING][variable] C:\\MUST\\OneDrive - Macau University of Science and Technology\\SoftwareEngineering\\project\\1031\\tests\\data\\test_comprehensive_examples.c:13:6: 变量 `ptr1` 可能在赋值前被使用。\n    ↳ 建议: 在引用前检查变量赋值路径\n       可以通过初始化或在所有分支赋值来避免。\n  [WARNING][variable] C:\\MUST\\OneDrive - Macau University of Science and Technology\\SoftwareEngineering\\project\\1031\\tests\\data\\test_comprehensive_examples.c:26:5: 变量 `arr_ptr` 可能在赋值前被使用。\n    ↳ 建议: 在引用前检查变量赋值路径\n       可以通过初始化或在所有分支赋值来避免。\n  [WARNING][variable] C:\\MUST\\OneDrive - Macau University of Science and Technology\\SoftwareEngineering\\project\\1031\\tests\\data\\test_comprehensive_examples.c:31:5: 变量 `str_ptr` 可能在赋值前被使用。\n    ↳ 建议: 在引用前检查变量赋值路径\n       可以通过初始化或在所有分支赋值来避免。\n  [WARNING][variable] C:\\MUST\\OneDrive - Macau University of Science and Technology\\SoftwareEngineering\\project\\1031\\tests\\data\\test_comprehensive_examples.c:36:7: 变量 `double_ptr` 可能在赋值前被使用。\n    ↳ 建议: 在引用前检查变量赋值路径\n       可以通过初始化或在所有分支赋值来避免。\n  [WARNING][variable] C:\\MUST\\OneDrive - Macau University of Science and Technology\\SoftwareEngineering\\project\\1031\\tests\\data\\test_comprehensive_examples.c:43:21: 变量 `wild_param` 可能在赋值前被使用。\n    ↳ 建议: 在引用前检查变量赋值路径\n       可以通过初始化或在所有分支赋值来避免。\n  [WARNING][variable] C:\\MUST\\OneDrive - Macau University of Science and Technology\\SoftwareEngineering\\project\\1031\\tests\\data\\test_comprehensive_examples.c:48:9: 变量 `loop_ptr` 可能在赋值前被使用。\n    ↳ 建议: 在引用前检查变量赋值路径\n       可以通过初始化或在所有分支赋值来避免。\n  [WARNING][variable] C:\\MUST\\OneDrive - Macau University of Science and Technology\\SoftwareEngineering\\project\\1031\\tests\\data\\test_comprehensive_examples.c:54:10: 变量 `cond_ptr` 可能在赋值前被使用。\n    ↳ 建议: 在引用前检查变量赋值路径\n       可以通过初始化或在所有分支赋值来避免。\n  [WARNING][memory] C:\\MUST\\OneDrive - Macau University of Science and Technology\\SoftwareEngineering\\project\\1031\\tests\\data\\test_comprehensive_examples.c:79:1: 函数 `test_memory_leak` 中分配次数(3)多于释放次数(0)，可能存在内存泄漏。\n    ↳ 建议: 为每一次动态分配配对调用 free\n       考虑使用 goto/清理块或智能指针样式封装确保释放。\n  [WARNING][memory] C:\\MUST\\OneDrive - Macau University of Science and Technology\\SoftwareEngineering\\project\\1031\\tests\\data\\test_comprehensive_examples.c:115:1: 函数 `test_partial_leak` 中分配次数(3)多于释放次数(2)，可能存在内存泄漏。\n    ↳ 建议: 为每一次动态分配配对调用 free\n       考虑使用 goto/清理块或智能指针样式封装确保释放。\n  [WARNING][memory] C:\\MUST\\OneDrive - Macau University of Science and Technology\\SoftwareEngineering\\project\\1031\\tests\\data\\test_comprehensive_examples.c:137:1: 函数 `test_realloc_leak` 中分配次数(2)多于释放次数(0)，可能存在内存泄漏。\n    ↳ 建议: 为每一次动态分配配对调用 free\n       考虑使用 goto/清理块或智能指针样式封装确保释放。\n  [WARNING][memory] C:\\MUST\\OneDrive - Macau University of Science and Technology\\SoftwareEngineering\\project\\1031\\tests\\data\\test_comprehensive_examples.c:152:1: 函数 `helper_function` 中分配次数(1)多于释放次数(0)，可能存在内存泄漏。\n    ↳ 建议: 为每一次动态分配配对调用 free\n       考虑使用 goto/清理块或智能指针样式封装确保释放。\n  [WARNING][memory] C:\\MUST\\OneDrive - Macau University of Science and Technology\\SoftwareEngineering\\project\\1031\\tests\\data\\test_comprehensive_examples.c:172:1: 函数 `test_conditional_free` 中分配次数(2)多于释放次数(1)，可能存在内存泄漏。\n    ↳ 建议: 为每一次动态分配配对调用 free\n       考虑使用 goto/清理块或智能指针样式封装确保释放。\n  [WARNING][variable] C:\\MUST\\OneDrive - Macau University of Science and Technology\\SoftwareEngineering\\project\\1031\\tests\\data\\test_comprehensive_examples.c:278:6: 变量 `ptr1` 可能在赋值前被使用。\n    ↳ 建议: 在引用前检查变量赋值路径\n       可以通过初始化或在所有分支赋值来避免。\n  [WARNING][variable] C:\\MUST\\OneDrive - Macau University of Science and Technology\\SoftwareEngineering\\project\\1031\\tests\\data\\test_comprehensive_examples.c:281:5: 变量 `str1` 可能在赋值前被使用。\n    ↳ 建议: 在引用前检查变量赋值路径\n       可以通过初始化或在所有分支赋值来避免。\n  [WARNING][variable] C:\\MUST\\OneDrive - Macau University of Science and Technology\\SoftwareEngineering\\project\\1031\\tests\\data\\test_comprehensive_examples.c:284:5: 变量 `arr1` 可能在赋值前被使用。\n    ↳ 建议: 在引用前检查变量赋值路径\n       可以通过初始化或在所有分支赋值来避免。\n  [WARNING][variable] C:\\MUST\\OneDrive - Macau University of Science and Technology\\SoftwareEngineering\\project\\1031\\tests\\data\\test_comprehensive_examples.c:302:21: 变量 `ptr3` 可能在赋值前被使用。\n    ↳ 建议: 在引用前检查变量赋值路径\n       可以通过初始化或在所有分支赋值来避免。\n  [WARNING][variable] C:\\MUST\\OneDrive - Macau University of Science and Technology\\SoftwareEngineering\\project\\1031\\tests\\data\\test_comprehensive_examples.c:305:17: 变量 `str3` 可能在赋值前被使用。\n    ↳ 建议: 在引用前检查变量赋值路径\n       可以通过初始化或在所有分支赋值来避免。\n  [WARNING][control-flow] C:\\MUST\\OneDrive - Macau University of Science and Technology\\SoftwareEngineering\\project\\1031\\tests\\data\\test_comprehensive_examples.c:364:5: 循环条件恒为真，可能导致死循环。\n    ↳ 建议: 为循环添加退出条件或 break\n       确保循环条件可以变为假，或在循环体内加入跳出逻辑。\n  [WARNING][control-flow] C:\\MUST\\OneDrive - Macau University of Science and Technology\\SoftwareEngineering\\project\\1031\\tests\\data\\test_comprehensive_examples.c:370:5: 循环条件恒为真，可能导致死循环。\n    ↳ 建议: 为循环添加退出条件或 break\n       确保循环条件可以变为假，或在循环体内加入跳出逻辑。\n  [WARNING][control-flow] C:\\MUST\\OneDrive - Macau University of Science and Technology\\SoftwareEngineering\\project\\1031\\tests\\data\\test_comprehensive_examples.c:437:5: 循环条件恒为真，可能导致死循环。\n    ↳ 建议: 为循环添加退出条件或 break\n       确保循环条件可以变为假，或在循环体内加入跳出逻辑。",
+  "metrics": {
+    "total_issues": 23,
+    "true_positive": 2,
+    "false_positive": 21,
+    "false_negative": 3
+  },
+  "expected_reference": [
+    {
+      "category": "memory",
+      "line": 12
+    },
+    {
+      "category": "memory",
+      "line": 290
+    },
+    {
+      "category": "stdlib",
+      "line": 343
+    },
+    {
+      "category": "stdlib",
+      "line": 354
+    },
+    {
+      "category": "numeric",
+      "line": 364
+    }
+  ]
+}

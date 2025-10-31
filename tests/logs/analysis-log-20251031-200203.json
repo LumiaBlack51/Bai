@@ -1,0 +1,1162 @@
+{
+  "generated_at": "2025-10-31T20:02:03.878984",
+  "sources": [
+    "C:\\MUST\\OneDrive - Macau University of Science and Technology\\SoftwareEngineering\\project\\1031\\tests\\data\\test_comprehensive_examples.c"
+  ],
+  "reports": [
+    {
+      "source": "C:\\MUST\\OneDrive - Macau University of Science and Technology\\SoftwareEngineering\\project\\1031\\tests\\data\\test_comprehensive_examples.c",
+      "issues": [
+        {
+          "category": "memory",
+          "severity": "error",
+          "message": "指针 `ptr2` 可能为空却被解引用。",
+          "file": "C:\\MUST\\OneDrive - Macau University of Science and Technology\\SoftwareEngineering\\project\\1031\\tests\\data\\test_comprehensive_examples.c",
+          "line": 290,
+          "column": 5,
+          "suggestion": {
+            "title": "在解引用 `ptr2` 前检查是否为空",
+            "detail": "例如: `if (ptr2 == NULL) { /* 错误处理 */ }`"
+          }
+        },
+        {
+          "category": "memory",
+          "severity": "error",
+          "message": "指针 `ptr4` 可能为空却被解引用。",
+          "file": "C:\\MUST\\OneDrive - Macau University of Science and Technology\\SoftwareEngineering\\project\\1031\\tests\\data\\test_comprehensive_examples.c",
+          "line": 311,
+          "column": 20,
+          "suggestion": {
+            "title": "在解引用 `ptr4` 前检查是否为空",
+            "detail": "例如: `if (ptr4 == NULL) { /* 错误处理 */ }`"
+          }
+        },
+        {
+          "category": "variable",
+          "severity": "warning",
+          "message": "变量 `p` 可能在赋值前被使用。",
+          "file": "C:\\MUST\\OneDrive - Macau University of Science and Technology\\SoftwareEngineering\\project\\1031\\tests\\data\\test_comprehensive_examples.c",
+          "line": 21,
+          "column": 5,
+          "suggestion": {
+            "title": "在引用前检查变量赋值路径",
+            "detail": "可以通过初始化或在所有分支赋值来避免。"
+          }
+        },
+        {
+          "category": "variable",
+          "severity": "warning",
+          "message": "变量 `arr_ptr` 可能在赋值前被使用。",
+          "file": "C:\\MUST\\OneDrive - Macau University of Science and Technology\\SoftwareEngineering\\project\\1031\\tests\\data\\test_comprehensive_examples.c",
+          "line": 26,
+          "column": 5,
+          "suggestion": {
+            "title": "在引用前检查变量赋值路径",
+            "detail": "可以通过初始化或在所有分支赋值来避免。"
+          }
+        },
+        {
+          "category": "variable",
+          "severity": "warning",
+          "message": "变量 `str_ptr` 可能在赋值前被使用。",
+          "file": "C:\\MUST\\OneDrive - Macau University of Science and Technology\\SoftwareEngineering\\project\\1031\\tests\\data\\test_comprehensive_examples.c",
+          "line": 31,
+          "column": 5,
+          "suggestion": {
+            "title": "在引用前检查变量赋值路径",
+            "detail": "可以通过初始化或在所有分支赋值来避免。"
+          }
+        },
+        {
+          "category": "variable",
+          "severity": "warning",
+          "message": "变量 `test_wild_param` 可能在赋值前被使用。",
+          "file": "C:\\MUST\\OneDrive - Macau University of Science and Technology\\SoftwareEngineering\\project\\1031\\tests\\data\\test_comprehensive_examples.c",
+          "line": 43,
+          "column": 5,
+          "suggestion": {
+            "title": "在引用前检查变量赋值路径",
+            "detail": "可以通过初始化或在所有分支赋值来避免。"
+          }
+        },
+        {
+          "category": "variable",
+          "severity": "warning",
+          "message": "变量 `wild_param` 可能在赋值前被使用。",
+          "file": "C:\\MUST\\OneDrive - Macau University of Science and Technology\\SoftwareEngineering\\project\\1031\\tests\\data\\test_comprehensive_examples.c",
+          "line": 43,
+          "column": 21,
+          "suggestion": {
+            "title": "在引用前检查变量赋值路径",
+            "detail": "可以通过初始化或在所有分支赋值来避免。"
+          }
+        },
+        {
+          "category": "variable",
+          "severity": "warning",
+          "message": "变量 `loop_ptr` 可能在赋值前被使用。",
+          "file": "C:\\MUST\\OneDrive - Macau University of Science and Technology\\SoftwareEngineering\\project\\1031\\tests\\data\\test_comprehensive_examples.c",
+          "line": 48,
+          "column": 9,
+          "suggestion": {
+            "title": "在引用前检查变量赋值路径",
+            "detail": "可以通过初始化或在所有分支赋值来避免。"
+          }
+        },
+        {
+          "category": "variable",
+          "severity": "warning",
+          "message": "变量 `nested_ptr` 可能在赋值前被使用。",
+          "file": "C:\\MUST\\OneDrive - Macau University of Science and Technology\\SoftwareEngineering\\project\\1031\\tests\\data\\test_comprehensive_examples.c",
+          "line": 63,
+          "column": 5,
+          "suggestion": {
+            "title": "在引用前检查变量赋值路径",
+            "detail": "可以通过初始化或在所有分支赋值来避免。"
+          }
+        },
+        {
+          "category": "variable",
+          "severity": "warning",
+          "message": "变量 `get_wild_pointer` 可能在赋值前被使用。",
+          "file": "C:\\MUST\\OneDrive - Macau University of Science and Technology\\SoftwareEngineering\\project\\1031\\tests\\data\\test_comprehensive_examples.c",
+          "line": 70,
+          "column": 25,
+          "suggestion": {
+            "title": "在引用前检查变量赋值路径",
+            "detail": "可以通过初始化或在所有分支赋值来避免。"
+          }
+        },
+        {
+          "category": "memory",
+          "severity": "warning",
+          "message": "函数 `test_memory_leak` 中分配次数(3)多于释放次数(0)，可能存在内存泄漏。",
+          "file": "C:\\MUST\\OneDrive - Macau University of Science and Technology\\SoftwareEngineering\\project\\1031\\tests\\data\\test_comprehensive_examples.c",
+          "line": 79,
+          "column": 1,
+          "suggestion": {
+            "title": "为每一次动态分配配对调用 free",
+            "detail": "考虑使用 goto/清理块或智能指针样式封装确保释放。"
+          }
+        },
+        {
+          "category": "variable",
+          "severity": "warning",
+          "message": "变量 `malloc` 可能在赋值前被使用。",
+          "file": "C:\\MUST\\OneDrive - Macau University of Science and Technology\\SoftwareEngineering\\project\\1031\\tests\\data\\test_comprehensive_examples.c",
+          "line": 81,
+          "column": 17,
+          "suggestion": {
+            "title": "在引用前检查变量赋值路径",
+            "detail": "可以通过初始化或在所有分支赋值来避免。"
+          }
+        },
+        {
+          "category": "variable",
+          "severity": "warning",
+          "message": "变量 `calloc` 可能在赋值前被使用。",
+          "file": "C:\\MUST\\OneDrive - Macau University of Science and Technology\\SoftwareEngineering\\project\\1031\\tests\\data\\test_comprehensive_examples.c",
+          "line": 83,
+          "column": 20,
+          "suggestion": {
+            "title": "在引用前检查变量赋值路径",
+            "detail": "可以通过初始化或在所有分支赋值来避免。"
+          }
+        },
+        {
+          "category": "variable",
+          "severity": "warning",
+          "message": "变量 `strcpy` 可能在赋值前被使用。",
+          "file": "C:\\MUST\\OneDrive - Macau University of Science and Technology\\SoftwareEngineering\\project\\1031\\tests\\data\\test_comprehensive_examples.c",
+          "line": 87,
+          "column": 5,
+          "suggestion": {
+            "title": "在引用前检查变量赋值路径",
+            "detail": "可以通过初始化或在所有分支赋值来避免。"
+          }
+        },
+        {
+          "category": "variable",
+          "severity": "warning",
+          "message": "变量 `printf` 可能在赋值前被使用。",
+          "file": "C:\\MUST\\OneDrive - Macau University of Science and Technology\\SoftwareEngineering\\project\\1031\\tests\\data\\test_comprehensive_examples.c",
+          "line": 91,
+          "column": 5,
+          "suggestion": {
+            "title": "在引用前检查变量赋值路径",
+            "detail": "可以通过初始化或在所有分支赋值来避免。"
+          }
+        },
+        {
+          "category": "variable",
+          "severity": "warning",
+          "message": "变量 `malloc` 可能在赋值前被使用。",
+          "file": "C:\\MUST\\OneDrive - Macau University of Science and Technology\\SoftwareEngineering\\project\\1031\\tests\\data\\test_comprehensive_examples.c",
+          "line": 98,
+          "column": 17,
+          "suggestion": {
+            "title": "在引用前检查变量赋值路径",
+            "detail": "可以通过初始化或在所有分支赋值来避免。"
+          }
+        },
+        {
+          "category": "variable",
+          "severity": "warning",
+          "message": "变量 `strcpy` 可能在赋值前被使用。",
+          "file": "C:\\MUST\\OneDrive - Macau University of Science and Technology\\SoftwareEngineering\\project\\1031\\tests\\data\\test_comprehensive_examples.c",
+          "line": 103,
+          "column": 9,
+          "suggestion": {
+            "title": "在引用前检查变量赋值路径",
+            "detail": "可以通过初始化或在所有分支赋值来避免。"
+          }
+        },
+        {
+          "category": "variable",
+          "severity": "warning",
+          "message": "变量 `printf` 可能在赋值前被使用。",
+          "file": "C:\\MUST\\OneDrive - Macau University of Science and Technology\\SoftwareEngineering\\project\\1031\\tests\\data\\test_comprehensive_examples.c",
+          "line": 105,
+          "column": 9,
+          "suggestion": {
+            "title": "在引用前检查变量赋值路径",
+            "detail": "可以通过初始化或在所有分支赋值来避免。"
+          }
+        },
+        {
+          "category": "variable",
+          "severity": "warning",
+          "message": "变量 `free` 可能在赋值前被使用。",
+          "file": "C:\\MUST\\OneDrive - Macau University of Science and Technology\\SoftwareEngineering\\project\\1031\\tests\\data\\test_comprehensive_examples.c",
+          "line": 109,
+          "column": 9,
+          "suggestion": {
+            "title": "在引用前检查变量赋值路径",
+            "detail": "可以通过初始化或在所有分支赋值来避免。"
+          }
+        },
+        {
+          "category": "memory",
+          "severity": "warning",
+          "message": "函数 `test_partial_leak` 中分配次数(3)多于释放次数(2)，可能存在内存泄漏。",
+          "file": "C:\\MUST\\OneDrive - Macau University of Science and Technology\\SoftwareEngineering\\project\\1031\\tests\\data\\test_comprehensive_examples.c",
+          "line": 115,
+          "column": 1,
+          "suggestion": {
+            "title": "为每一次动态分配配对调用 free",
+            "detail": "考虑使用 goto/清理块或智能指针样式封装确保释放。"
+          }
+        },
+        {
+          "category": "variable",
+          "severity": "warning",
+          "message": "变量 `malloc` 可能在赋值前被使用。",
+          "file": "C:\\MUST\\OneDrive - Macau University of Science and Technology\\SoftwareEngineering\\project\\1031\\tests\\data\\test_comprehensive_examples.c",
+          "line": 116,
+          "column": 17,
+          "suggestion": {
+            "title": "在引用前检查变量赋值路径",
+            "detail": "可以通过初始化或在所有分支赋值来避免。"
+          }
+        },
+        {
+          "category": "variable",
+          "severity": "warning",
+          "message": "变量 `free` 可能在赋值前被使用。",
+          "file": "C:\\MUST\\OneDrive - Macau University of Science and Technology\\SoftwareEngineering\\project\\1031\\tests\\data\\test_comprehensive_examples.c",
+          "line": 122,
+          "column": 9,
+          "suggestion": {
+            "title": "在引用前检查变量赋值路径",
+            "detail": "可以通过初始化或在所有分支赋值来避免。"
+          }
+        },
+        {
+          "category": "variable",
+          "severity": "warning",
+          "message": "变量 `strcpy` 可能在赋值前被使用。",
+          "file": "C:\\MUST\\OneDrive - Macau University of Science and Technology\\SoftwareEngineering\\project\\1031\\tests\\data\\test_comprehensive_examples.c",
+          "line": 126,
+          "column": 9,
+          "suggestion": {
+            "title": "在引用前检查变量赋值路径",
+            "detail": "可以通过初始化或在所有分支赋值来避免。"
+          }
+        },
+        {
+          "category": "memory",
+          "severity": "warning",
+          "message": "函数 `test_realloc_leak` 中分配次数(2)多于释放次数(0)，可能存在内存泄漏。",
+          "file": "C:\\MUST\\OneDrive - Macau University of Science and Technology\\SoftwareEngineering\\project\\1031\\tests\\data\\test_comprehensive_examples.c",
+          "line": 137,
+          "column": 1,
+          "suggestion": {
+            "title": "为每一次动态分配配对调用 free",
+            "detail": "考虑使用 goto/清理块或智能指针样式封装确保释放。"
+          }
+        },
+        {
+          "category": "variable",
+          "severity": "warning",
+          "message": "变量 `malloc` 可能在赋值前被使用。",
+          "file": "C:\\MUST\\OneDrive - Macau University of Science and Technology\\SoftwareEngineering\\project\\1031\\tests\\data\\test_comprehensive_examples.c",
+          "line": 138,
+          "column": 17,
+          "suggestion": {
+            "title": "在引用前检查变量赋值路径",
+            "detail": "可以通过初始化或在所有分支赋值来避免。"
+          }
+        },
+        {
+          "category": "variable",
+          "severity": "warning",
+          "message": "变量 `realloc` 可能在赋值前被使用。",
+          "file": "C:\\MUST\\OneDrive - Macau University of Science and Technology\\SoftwareEngineering\\project\\1031\\tests\\data\\test_comprehensive_examples.c",
+          "line": 143,
+          "column": 16,
+          "suggestion": {
+            "title": "在引用前检查变量赋值路径",
+            "detail": "可以通过初始化或在所有分支赋值来避免。"
+          }
+        },
+        {
+          "category": "memory",
+          "severity": "warning",
+          "message": "函数 `helper_function` 中分配次数(1)多于释放次数(0)，可能存在内存泄漏。",
+          "file": "C:\\MUST\\OneDrive - Macau University of Science and Technology\\SoftwareEngineering\\project\\1031\\tests\\data\\test_comprehensive_examples.c",
+          "line": 152,
+          "column": 1,
+          "suggestion": {
+            "title": "为每一次动态分配配对调用 free",
+            "detail": "考虑使用 goto/清理块或智能指针样式封装确保释放。"
+          }
+        },
+        {
+          "category": "variable",
+          "severity": "warning",
+          "message": "变量 `malloc` 可能在赋值前被使用。",
+          "file": "C:\\MUST\\OneDrive - Macau University of Science and Technology\\SoftwareEngineering\\project\\1031\\tests\\data\\test_comprehensive_examples.c",
+          "line": 153,
+          "column": 18,
+          "suggestion": {
+            "title": "在引用前检查变量赋值路径",
+            "detail": "可以通过初始化或在所有分支赋值来避免。"
+          }
+        },
+        {
+          "category": "variable",
+          "severity": "warning",
+          "message": "变量 `strcpy` 可能在赋值前被使用。",
+          "file": "C:\\MUST\\OneDrive - Macau University of Science and Technology\\SoftwareEngineering\\project\\1031\\tests\\data\\test_comprehensive_examples.c",
+          "line": 155,
+          "column": 9,
+          "suggestion": {
+            "title": "在引用前检查变量赋值路径",
+            "detail": "可以通过初始化或在所有分支赋值来避免。"
+          }
+        },
+        {
+          "category": "variable",
+          "severity": "warning",
+          "message": "变量 `malloc` 可能在赋值前被使用。",
+          "file": "C:\\MUST\\OneDrive - Macau University of Science and Technology\\SoftwareEngineering\\project\\1031\\tests\\data\\test_comprehensive_examples.c",
+          "line": 161,
+          "column": 17,
+          "suggestion": {
+            "title": "在引用前检查变量赋值路径",
+            "detail": "可以通过初始化或在所有分支赋值来避免。"
+          }
+        },
+        {
+          "category": "variable",
+          "severity": "warning",
+          "message": "变量 `free` 可能在赋值前被使用。",
+          "file": "C:\\MUST\\OneDrive - Macau University of Science and Technology\\SoftwareEngineering\\project\\1031\\tests\\data\\test_comprehensive_examples.c",
+          "line": 164,
+          "column": 9,
+          "suggestion": {
+            "title": "在引用前检查变量赋值路径",
+            "detail": "可以通过初始化或在所有分支赋值来避免。"
+          }
+        },
+        {
+          "category": "variable",
+          "severity": "warning",
+          "message": "变量 `helper_function` 可能在赋值前被使用。",
+          "file": "C:\\MUST\\OneDrive - Macau University of Science and Technology\\SoftwareEngineering\\project\\1031\\tests\\data\\test_comprehensive_examples.c",
+          "line": 167,
+          "column": 9,
+          "suggestion": {
+            "title": "在引用前检查变量赋值路径",
+            "detail": "可以通过初始化或在所有分支赋值来避免。"
+          }
+        },
+        {
+          "category": "memory",
+          "severity": "warning",
+          "message": "函数 `test_conditional_free` 中分配次数(2)多于释放次数(1)，可能存在内存泄漏。",
+          "file": "C:\\MUST\\OneDrive - Macau University of Science and Technology\\SoftwareEngineering\\project\\1031\\tests\\data\\test_comprehensive_examples.c",
+          "line": 172,
+          "column": 1,
+          "suggestion": {
+            "title": "为每一次动态分配配对调用 free",
+            "detail": "考虑使用 goto/清理块或智能指针样式封装确保释放。"
+          }
+        },
+        {
+          "category": "variable",
+          "severity": "warning",
+          "message": "变量 `malloc` 可能在赋值前被使用。",
+          "file": "C:\\MUST\\OneDrive - Macau University of Science and Technology\\SoftwareEngineering\\project\\1031\\tests\\data\\test_comprehensive_examples.c",
+          "line": 173,
+          "column": 17,
+          "suggestion": {
+            "title": "在引用前检查变量赋值路径",
+            "detail": "可以通过初始化或在所有分支赋值来避免。"
+          }
+        },
+        {
+          "category": "variable",
+          "severity": "warning",
+          "message": "变量 `strcpy` 可能在赋值前被使用。",
+          "file": "C:\\MUST\\OneDrive - Macau University of Science and Technology\\SoftwareEngineering\\project\\1031\\tests\\data\\test_comprehensive_examples.c",
+          "line": 178,
+          "column": 9,
+          "suggestion": {
+            "title": "在引用前检查变量赋值路径",
+            "detail": "可以通过初始化或在所有分支赋值来避免。"
+          }
+        },
+        {
+          "category": "variable",
+          "severity": "warning",
+          "message": "变量 `free` 可能在赋值前被使用。",
+          "file": "C:\\MUST\\OneDrive - Macau University of Science and Technology\\SoftwareEngineering\\project\\1031\\tests\\data\\test_comprehensive_examples.c",
+          "line": 182,
+          "column": 13,
+          "suggestion": {
+            "title": "在引用前检查变量赋值路径",
+            "detail": "可以通过初始化或在所有分支赋值来避免。"
+          }
+        },
+        {
+          "category": "variable",
+          "severity": "warning",
+          "message": "变量 `p1` 可能在赋值前被使用。",
+          "file": "C:\\MUST\\OneDrive - Macau University of Science and Technology\\SoftwareEngineering\\project\\1031\\tests\\data\\test_comprehensive_examples.c",
+          "line": 242,
+          "column": 5,
+          "suggestion": {
+            "title": "在引用前检查变量赋值路径",
+            "detail": "可以通过初始化或在所有分支赋值来避免。"
+          }
+        },
+        {
+          "category": "variable",
+          "severity": "warning",
+          "message": "变量 `p2` 可能在赋值前被使用。",
+          "file": "C:\\MUST\\OneDrive - Macau University of Science and Technology\\SoftwareEngineering\\project\\1031\\tests\\data\\test_comprehensive_examples.c",
+          "line": 243,
+          "column": 5,
+          "suggestion": {
+            "title": "在引用前检查变量赋值路径",
+            "detail": "可以通过初始化或在所有分支赋值来避免。"
+          }
+        },
+        {
+          "category": "variable",
+          "severity": "warning",
+          "message": "变量 `p3` 可能在赋值前被使用。",
+          "file": "C:\\MUST\\OneDrive - Macau University of Science and Technology\\SoftwareEngineering\\project\\1031\\tests\\data\\test_comprehensive_examples.c",
+          "line": 244,
+          "column": 5,
+          "suggestion": {
+            "title": "在引用前检查变量赋值路径",
+            "detail": "可以通过初始化或在所有分支赋值来避免。"
+          }
+        },
+        {
+          "category": "variable",
+          "severity": "warning",
+          "message": "变量 `p4` 可能在赋值前被使用。",
+          "file": "C:\\MUST\\OneDrive - Macau University of Science and Technology\\SoftwareEngineering\\project\\1031\\tests\\data\\test_comprehensive_examples.c",
+          "line": 245,
+          "column": 5,
+          "suggestion": {
+            "title": "在引用前检查变量赋值路径",
+            "detail": "可以通过初始化或在所有分支赋值来避免。"
+          }
+        },
+        {
+          "category": "variable",
+          "severity": "warning",
+          "message": "变量 `point1` 可能在赋值前被使用。",
+          "file": "C:\\MUST\\OneDrive - Macau University of Science and Technology\\SoftwareEngineering\\project\\1031\\tests\\data\\test_comprehensive_examples.c",
+          "line": 248,
+          "column": 5,
+          "suggestion": {
+            "title": "在引用前检查变量赋值路径",
+            "detail": "可以通过初始化或在所有分支赋值来避免。"
+          }
+        },
+        {
+          "category": "variable",
+          "severity": "warning",
+          "message": "变量 `points` 可能在赋值前被使用。",
+          "file": "C:\\MUST\\OneDrive - Macau University of Science and Technology\\SoftwareEngineering\\project\\1031\\tests\\data\\test_comprehensive_examples.c",
+          "line": 252,
+          "column": 5,
+          "suggestion": {
+            "title": "在引用前检查变量赋值路径",
+            "detail": "可以通过初始化或在所有分支赋值来避免。"
+          }
+        },
+        {
+          "category": "variable",
+          "severity": "warning",
+          "message": "变量 `ptr_array` 可能在赋值前被使用。",
+          "file": "C:\\MUST\\OneDrive - Macau University of Science and Technology\\SoftwareEngineering\\project\\1031\\tests\\data\\test_comprehensive_examples.c",
+          "line": 256,
+          "column": 5,
+          "suggestion": {
+            "title": "在引用前检查变量赋值路径",
+            "detail": "可以通过初始化或在所有分支赋值来避免。"
+          }
+        },
+        {
+          "category": "variable",
+          "severity": "warning",
+          "message": "变量 `node1` 可能在赋值前被使用。",
+          "file": "C:\\MUST\\OneDrive - Macau University of Science and Technology\\SoftwareEngineering\\project\\1031\\tests\\data\\test_comprehensive_examples.c",
+          "line": 259,
+          "column": 5,
+          "suggestion": {
+            "title": "在引用前检查变量赋值路径",
+            "detail": "可以通过初始化或在所有分支赋值来避免。"
+          }
+        },
+        {
+          "category": "variable",
+          "severity": "warning",
+          "message": "变量 `node_ptr` 可能在赋值前被使用。",
+          "file": "C:\\MUST\\OneDrive - Macau University of Science and Technology\\SoftwareEngineering\\project\\1031\\tests\\data\\test_comprehensive_examples.c",
+          "line": 260,
+          "column": 5,
+          "suggestion": {
+            "title": "在引用前检查变量赋值路径",
+            "detail": "可以通过初始化或在所有分支赋值来避免。"
+          }
+        },
+        {
+          "category": "variable",
+          "severity": "warning",
+          "message": "变量 `graph1` 可能在赋值前被使用。",
+          "file": "C:\\MUST\\OneDrive - Macau University of Science and Technology\\SoftwareEngineering\\project\\1031\\tests\\data\\test_comprehensive_examples.c",
+          "line": 263,
+          "column": 5,
+          "suggestion": {
+            "title": "在引用前检查变量赋值路径",
+            "detail": "可以通过初始化或在所有分支赋值来避免。"
+          }
+        },
+        {
+          "category": "variable",
+          "severity": "warning",
+          "message": "变量 `graph_ptr` 可能在赋值前被使用。",
+          "file": "C:\\MUST\\OneDrive - Macau University of Science and Technology\\SoftwareEngineering\\project\\1031\\tests\\data\\test_comprehensive_examples.c",
+          "line": 264,
+          "column": 5,
+          "suggestion": {
+            "title": "在引用前检查变量赋值路径",
+            "detail": "可以通过初始化或在所有分支赋值来避免。"
+          }
+        },
+        {
+          "category": "variable",
+          "severity": "warning",
+          "message": "变量 `student1` 可能在赋值前被使用。",
+          "file": "C:\\MUST\\OneDrive - Macau University of Science and Technology\\SoftwareEngineering\\project\\1031\\tests\\data\\test_comprehensive_examples.c",
+          "line": 267,
+          "column": 5,
+          "suggestion": {
+            "title": "在引用前检查变量赋值路径",
+            "detail": "可以通过初始化或在所有分支赋值来避免。"
+          }
+        },
+        {
+          "category": "variable",
+          "severity": "warning",
+          "message": "变量 `student_ptr` 可能在赋值前被使用。",
+          "file": "C:\\MUST\\OneDrive - Macau University of Science and Technology\\SoftwareEngineering\\project\\1031\\tests\\data\\test_comprehensive_examples.c",
+          "line": 268,
+          "column": 5,
+          "suggestion": {
+            "title": "在引用前检查变量赋值路径",
+            "detail": "可以通过初始化或在所有分支赋值来避免。"
+          }
+        },
+        {
+          "category": "variable",
+          "severity": "warning",
+          "message": "变量 `str1` 可能在赋值前被使用。",
+          "file": "C:\\MUST\\OneDrive - Macau University of Science and Technology\\SoftwareEngineering\\project\\1031\\tests\\data\\test_comprehensive_examples.c",
+          "line": 281,
+          "column": 5,
+          "suggestion": {
+            "title": "在引用前检查变量赋值路径",
+            "detail": "可以通过初始化或在所有分支赋值来避免。"
+          }
+        },
+        {
+          "category": "variable",
+          "severity": "warning",
+          "message": "变量 `arr1` 可能在赋值前被使用。",
+          "file": "C:\\MUST\\OneDrive - Macau University of Science and Technology\\SoftwareEngineering\\project\\1031\\tests\\data\\test_comprehensive_examples.c",
+          "line": 284,
+          "column": 5,
+          "suggestion": {
+            "title": "在引用前检查变量赋值路径",
+            "detail": "可以通过初始化或在所有分支赋值来避免。"
+          }
+        },
+        {
+          "category": "variable",
+          "severity": "warning",
+          "message": "变量 `printf` 可能在赋值前被使用。",
+          "file": "C:\\MUST\\OneDrive - Macau University of Science and Technology\\SoftwareEngineering\\project\\1031\\tests\\data\\test_comprehensive_examples.c",
+          "line": 302,
+          "column": 5,
+          "suggestion": {
+            "title": "在引用前检查变量赋值路径",
+            "detail": "可以通过初始化或在所有分支赋值来避免。"
+          }
+        },
+        {
+          "category": "variable",
+          "severity": "warning",
+          "message": "变量 `ptr3` 可能在赋值前被使用。",
+          "file": "C:\\MUST\\OneDrive - Macau University of Science and Technology\\SoftwareEngineering\\project\\1031\\tests\\data\\test_comprehensive_examples.c",
+          "line": 302,
+          "column": 21,
+          "suggestion": {
+            "title": "在引用前检查变量赋值路径",
+            "detail": "可以通过初始化或在所有分支赋值来避免。"
+          }
+        },
+        {
+          "category": "variable",
+          "severity": "warning",
+          "message": "变量 `scanf` 可能在赋值前被使用。",
+          "file": "C:\\MUST\\OneDrive - Macau University of Science and Technology\\SoftwareEngineering\\project\\1031\\tests\\data\\test_comprehensive_examples.c",
+          "line": 305,
+          "column": 5,
+          "suggestion": {
+            "title": "在引用前检查变量赋值路径",
+            "detail": "可以通过初始化或在所有分支赋值来避免。"
+          }
+        },
+        {
+          "category": "variable",
+          "severity": "warning",
+          "message": "变量 `str3` 可能在赋值前被使用。",
+          "file": "C:\\MUST\\OneDrive - Macau University of Science and Technology\\SoftwareEngineering\\project\\1031\\tests\\data\\test_comprehensive_examples.c",
+          "line": 305,
+          "column": 17,
+          "suggestion": {
+            "title": "在引用前检查变量赋值路径",
+            "detail": "可以通过初始化或在所有分支赋值来避免。"
+          }
+        },
+        {
+          "category": "variable",
+          "severity": "warning",
+          "message": "变量 `printf` 可能在赋值前被使用。",
+          "file": "C:\\MUST\\OneDrive - Macau University of Science and Technology\\SoftwareEngineering\\project\\1031\\tests\\data\\test_comprehensive_examples.c",
+          "line": 311,
+          "column": 5,
+          "suggestion": {
+            "title": "在引用前检查变量赋值路径",
+            "detail": "可以通过初始化或在所有分支赋值来避免。"
+          }
+        },
+        {
+          "category": "memory",
+          "severity": "warning",
+          "message": "指针 `ptr4` 可能为空却被作为参数传递。",
+          "file": "C:\\MUST\\OneDrive - Macau University of Science and Technology\\SoftwareEngineering\\project\\1031\\tests\\data\\test_comprehensive_examples.c",
+          "line": 311,
+          "column": 20,
+          "suggestion": {
+            "title": "在传入指针参数前进行空指针检查",
+            "detail": "确保 `ptr4` 在调用前已经被赋值为有效地址。"
+          }
+        },
+        {
+          "category": "variable",
+          "severity": "warning",
+          "message": "变量 `scanf` 可能在赋值前被使用。",
+          "file": "C:\\MUST\\OneDrive - Macau University of Science and Technology\\SoftwareEngineering\\project\\1031\\tests\\data\\test_comprehensive_examples.c",
+          "line": 314,
+          "column": 5,
+          "suggestion": {
+            "title": "在引用前检查变量赋值路径",
+            "detail": "可以通过初始化或在所有分支赋值来避免。"
+          }
+        },
+        {
+          "category": "memory",
+          "severity": "warning",
+          "message": "指针 `str4` 可能为空却被作为参数传递。",
+          "file": "C:\\MUST\\OneDrive - Macau University of Science and Technology\\SoftwareEngineering\\project\\1031\\tests\\data\\test_comprehensive_examples.c",
+          "line": 314,
+          "column": 17,
+          "suggestion": {
+            "title": "在传入指针参数前进行空指针检查",
+            "detail": "确保 `str4` 在调用前已经被赋值为有效地址。"
+          }
+        },
+        {
+          "category": "variable",
+          "severity": "warning",
+          "message": "变量 `printf` 可能在赋值前被使用。",
+          "file": "C:\\MUST\\OneDrive - Macau University of Science and Technology\\SoftwareEngineering\\project\\1031\\tests\\data\\test_comprehensive_examples.c",
+          "line": 321,
+          "column": 5,
+          "suggestion": {
+            "title": "在引用前检查变量赋值路径",
+            "detail": "可以通过初始化或在所有分支赋值来避免。"
+          }
+        },
+        {
+          "category": "variable",
+          "severity": "warning",
+          "message": "变量 `str5` 可能在赋值前被使用。",
+          "file": "C:\\MUST\\OneDrive - Macau University of Science and Technology\\SoftwareEngineering\\project\\1031\\tests\\data\\test_comprehensive_examples.c",
+          "line": 324,
+          "column": 18,
+          "suggestion": {
+            "title": "在引用前检查变量赋值路径",
+            "detail": "可以通过初始化或在所有分支赋值来避免。"
+          }
+        },
+        {
+          "category": "variable",
+          "severity": "warning",
+          "message": "变量 `malloc` 可能在赋值前被使用。",
+          "file": "C:\\MUST\\OneDrive - Macau University of Science and Technology\\SoftwareEngineering\\project\\1031\\tests\\data\\test_comprehensive_examples.c",
+          "line": 327,
+          "column": 17,
+          "suggestion": {
+            "title": "在引用前检查变量赋值路径",
+            "detail": "可以通过初始化或在所有分支赋值来避免。"
+          }
+        },
+        {
+          "category": "variable",
+          "severity": "warning",
+          "message": "变量 `free` 可能在赋值前被使用。",
+          "file": "C:\\MUST\\OneDrive - Macau University of Science and Technology\\SoftwareEngineering\\project\\1031\\tests\\data\\test_comprehensive_examples.c",
+          "line": 331,
+          "column": 9,
+          "suggestion": {
+            "title": "在引用前检查变量赋值路径",
+            "detail": "可以通过初始化或在所有分支赋值来避免。"
+          }
+        },
+        {
+          "category": "variable",
+          "severity": "warning",
+          "message": "变量 `printf` 可能在赋值前被使用。",
+          "file": "C:\\MUST\\OneDrive - Macau University of Science and Technology\\SoftwareEngineering\\project\\1031\\tests\\data\\test_comprehensive_examples.c",
+          "line": 343,
+          "column": 5,
+          "suggestion": {
+            "title": "在引用前检查变量赋值路径",
+            "detail": "可以通过初始化或在所有分支赋值来避免。"
+          }
+        },
+        {
+          "category": "variable",
+          "severity": "warning",
+          "message": "变量 `printf` 可能在赋值前被使用。",
+          "file": "C:\\MUST\\OneDrive - Macau University of Science and Technology\\SoftwareEngineering\\project\\1031\\tests\\data\\test_comprehensive_examples.c",
+          "line": 363,
+          "column": 5,
+          "suggestion": {
+            "title": "在引用前检查变量赋值路径",
+            "detail": "可以通过初始化或在所有分支赋值来避免。"
+          }
+        },
+        {
+          "category": "memory",
+          "severity": "warning",
+          "message": "指针 `j` 可能为空却被作为参数传递。",
+          "file": "C:\\MUST\\OneDrive - Macau University of Science and Technology\\SoftwareEngineering\\project\\1031\\tests\\data\\test_comprehensive_examples.c",
+          "line": 391,
+          "column": 28,
+          "suggestion": {
+            "title": "在传入指针参数前进行空指针检查",
+            "detail": "确保 `j` 在调用前已经被赋值为有效地址。"
+          }
+        },
+        {
+          "category": "memory",
+          "severity": "warning",
+          "message": "指针 `k` 可能为空却被作为参数传递。",
+          "file": "C:\\MUST\\OneDrive - Macau University of Science and Technology\\SoftwareEngineering\\project\\1031\\tests\\data\\test_comprehensive_examples.c",
+          "line": 397,
+          "column": 28,
+          "suggestion": {
+            "title": "在传入指针参数前进行空指针检查",
+            "detail": "确保 `k` 在调用前已经被赋值为有效地址。"
+          }
+        },
+        {
+          "category": "memory",
+          "severity": "warning",
+          "message": "指针 `m` 可能为空却被作为参数传递。",
+          "file": "C:\\MUST\\OneDrive - Macau University of Science and Technology\\SoftwareEngineering\\project\\1031\\tests\\data\\test_comprehensive_examples.c",
+          "line": 404,
+          "column": 28,
+          "suggestion": {
+            "title": "在传入指针参数前进行空指针检查",
+            "detail": "确保 `m` 在调用前已经被赋值为有效地址。"
+          }
+        },
+        {
+          "category": "memory",
+          "severity": "warning",
+          "message": "指针 `outer` 可能为空却被作为参数传递。",
+          "file": "C:\\MUST\\OneDrive - Macau University of Science and Technology\\SoftwareEngineering\\project\\1031\\tests\\data\\test_comprehensive_examples.c",
+          "line": 412,
+          "column": 44,
+          "suggestion": {
+            "title": "在传入指针参数前进行空指针检查",
+            "detail": "确保 `outer` 在调用前已经被赋值为有效地址。"
+          }
+        },
+        {
+          "category": "memory",
+          "severity": "warning",
+          "message": "指针 `inner` 可能为空却被作为参数传递。",
+          "file": "C:\\MUST\\OneDrive - Macau University of Science and Technology\\SoftwareEngineering\\project\\1031\\tests\\data\\test_comprehensive_examples.c",
+          "line": 412,
+          "column": 51,
+          "suggestion": {
+            "title": "在传入指针参数前进行空指针检查",
+            "detail": "确保 `inner` 在调用前已经被赋值为有效地址。"
+          }
+        },
+        {
+          "category": "memory",
+          "severity": "warning",
+          "message": "指针 `counter` 可能为空却被作为参数传递。",
+          "file": "C:\\MUST\\OneDrive - Macau University of Science and Technology\\SoftwareEngineering\\project\\1031\\tests\\data\\test_comprehensive_examples.c",
+          "line": 430,
+          "column": 34,
+          "suggestion": {
+            "title": "在传入指针参数前进行空指针检查",
+            "detail": "确保 `counter` 在调用前已经被赋值为有效地址。"
+          }
+        },
+        {
+          "category": "memory",
+          "severity": "warning",
+          "message": "指针 `n` 可能为空却被作为参数传递。",
+          "file": "C:\\MUST\\OneDrive - Macau University of Science and Technology\\SoftwareEngineering\\project\\1031\\tests\\data\\test_comprehensive_examples.c",
+          "line": 438,
+          "column": 28,
+          "suggestion": {
+            "title": "在传入指针参数前进行空指针检查",
+            "detail": "确保 `n` 在调用前已经被赋值为有效地址。"
+          }
+        },
+        {
+          "category": "variable",
+          "severity": "warning",
+          "message": "变量 `malloc` 可能在赋值前被使用。",
+          "file": "C:\\MUST\\OneDrive - Macau University of Science and Technology\\SoftwareEngineering\\project\\1031\\tests\\data\\test_comprehensive_examples.c",
+          "line": 462,
+          "column": 17,
+          "suggestion": {
+            "title": "在引用前检查变量赋值路径",
+            "detail": "可以通过初始化或在所有分支赋值来避免。"
+          }
+        },
+        {
+          "category": "variable",
+          "severity": "warning",
+          "message": "变量 `free` 可能在赋值前被使用。",
+          "file": "C:\\MUST\\OneDrive - Macau University of Science and Technology\\SoftwareEngineering\\project\\1031\\tests\\data\\test_comprehensive_examples.c",
+          "line": 464,
+          "column": 5,
+          "suggestion": {
+            "title": "在引用前检查变量赋值路径",
+            "detail": "可以通过初始化或在所有分支赋值来避免。"
+          }
+        },
+        {
+          "category": "variable",
+          "severity": "warning",
+          "message": "变量 `printf` 可能在赋值前被使用。",
+          "file": "C:\\MUST\\OneDrive - Macau University of Science and Technology\\SoftwareEngineering\\project\\1031\\tests\\data\\test_comprehensive_examples.c",
+          "line": 465,
+          "column": 5,
+          "suggestion": {
+            "title": "在引用前检查变量赋值路径",
+            "detail": "可以通过初始化或在所有分支赋值来避免。"
+          }
+        },
+        {
+          "category": "memory",
+          "severity": "warning",
+          "message": "指针 `i` 可能为空却被作为参数传递。",
+          "file": "C:\\MUST\\OneDrive - Macau University of Science and Technology\\SoftwareEngineering\\project\\1031\\tests\\data\\test_comprehensive_examples.c",
+          "line": 474,
+          "column": 24,
+          "suggestion": {
+            "title": "在传入指针参数前进行空指针检查",
+            "detail": "确保 `i` 在调用前已经被赋值为有效地址。"
+          }
+        },
+        {
+          "category": "variable",
+          "severity": "warning",
+          "message": "变量 `printf` 可能在赋值前被使用。",
+          "file": "C:\\MUST\\OneDrive - Macau University of Science and Technology\\SoftwareEngineering\\project\\1031\\tests\\data\\test_comprehensive_examples.c",
+          "line": 503,
+          "column": 5,
+          "suggestion": {
+            "title": "在引用前检查变量赋值路径",
+            "detail": "可以通过初始化或在所有分支赋值来避免。"
+          }
+        },
+        {
+          "category": "variable",
+          "severity": "warning",
+          "message": "变量 `test_wild_pointer` 可能在赋值前被使用。",
+          "file": "C:\\MUST\\OneDrive - Macau University of Science and Technology\\SoftwareEngineering\\project\\1031\\tests\\data\\test_comprehensive_examples.c",
+          "line": 506,
+          "column": 5,
+          "suggestion": {
+            "title": "在引用前检查变量赋值路径",
+            "detail": "可以通过初始化或在所有分支赋值来避免。"
+          }
+        },
+        {
+          "category": "variable",
+          "severity": "warning",
+          "message": "变量 `test_memory_leak` 可能在赋值前被使用。",
+          "file": "C:\\MUST\\OneDrive - Macau University of Science and Technology\\SoftwareEngineering\\project\\1031\\tests\\data\\test_comprehensive_examples.c",
+          "line": 509,
+          "column": 5,
+          "suggestion": {
+            "title": "在引用前检查变量赋值路径",
+            "detail": "可以通过初始化或在所有分支赋值来避免。"
+          }
+        },
+        {
+          "category": "variable",
+          "severity": "warning",
+          "message": "变量 `test_correct_free` 可能在赋值前被使用。",
+          "file": "C:\\MUST\\OneDrive - Macau University of Science and Technology\\SoftwareEngineering\\project\\1031\\tests\\data\\test_comprehensive_examples.c",
+          "line": 510,
+          "column": 5,
+          "suggestion": {
+            "title": "在引用前检查变量赋值路径",
+            "detail": "可以通过初始化或在所有分支赋值来避免。"
+          }
+        },
+        {
+          "category": "variable",
+          "severity": "warning",
+          "message": "变量 `test_partial_leak` 可能在赋值前被使用。",
+          "file": "C:\\MUST\\OneDrive - Macau University of Science and Technology\\SoftwareEngineering\\project\\1031\\tests\\data\\test_comprehensive_examples.c",
+          "line": 511,
+          "column": 5,
+          "suggestion": {
+            "title": "在引用前检查变量赋值路径",
+            "detail": "可以通过初始化或在所有分支赋值来避免。"
+          }
+        },
+        {
+          "category": "variable",
+          "severity": "warning",
+          "message": "变量 `test_realloc_leak` 可能在赋值前被使用。",
+          "file": "C:\\MUST\\OneDrive - Macau University of Science and Technology\\SoftwareEngineering\\project\\1031\\tests\\data\\test_comprehensive_examples.c",
+          "line": 512,
+          "column": 5,
+          "suggestion": {
+            "title": "在引用前检查变量赋值路径",
+            "detail": "可以通过初始化或在所有分支赋值来避免。"
+          }
+        },
+        {
+          "category": "variable",
+          "severity": "warning",
+          "message": "变量 `test_nested_leak` 可能在赋值前被使用。",
+          "file": "C:\\MUST\\OneDrive - Macau University of Science and Technology\\SoftwareEngineering\\project\\1031\\tests\\data\\test_comprehensive_examples.c",
+          "line": 513,
+          "column": 5,
+          "suggestion": {
+            "title": "在引用前检查变量赋值路径",
+            "detail": "可以通过初始化或在所有分支赋值来避免。"
+          }
+        },
+        {
+          "category": "variable",
+          "severity": "warning",
+          "message": "变量 `test_conditional_free` 可能在赋值前被使用。",
+          "file": "C:\\MUST\\OneDrive - Macau University of Science and Technology\\SoftwareEngineering\\project\\1031\\tests\\data\\test_comprehensive_examples.c",
+          "line": 514,
+          "column": 5,
+          "suggestion": {
+            "title": "在引用前检查变量赋值路径",
+            "detail": "可以通过初始化或在所有分支赋值来避免。"
+          }
+        },
+        {
+          "category": "variable",
+          "severity": "warning",
+          "message": "变量 `test_struct_pointer_declarations` 可能在赋值前被使用。",
+          "file": "C:\\MUST\\OneDrive - Macau University of Science and Technology\\SoftwareEngineering\\project\\1031\\tests\\data\\test_comprehensive_examples.c",
+          "line": 517,
+          "column": 5,
+          "suggestion": {
+            "title": "在引用前检查变量赋值路径",
+            "detail": "可以通过初始化或在所有分支赋值来避免。"
+          }
+        },
+        {
+          "category": "variable",
+          "severity": "warning",
+          "message": "变量 `test_wild_pointer_example4` 可能在赋值前被使用。",
+          "file": "C:\\MUST\\OneDrive - Macau University of Science and Technology\\SoftwareEngineering\\project\\1031\\tests\\data\\test_comprehensive_examples.c",
+          "line": 520,
+          "column": 5,
+          "suggestion": {
+            "title": "在引用前检查变量赋值路径",
+            "detail": "可以通过初始化或在所有分支赋值来避免。"
+          }
+        },
+        {
+          "category": "variable",
+          "severity": "warning",
+          "message": "变量 `test_null_pointer` 可能在赋值前被使用。",
+          "file": "C:\\MUST\\OneDrive - Macau University of Science and Technology\\SoftwareEngineering\\project\\1031\\tests\\data\\test_comprehensive_examples.c",
+          "line": 521,
+          "column": 5,
+          "suggestion": {
+            "title": "在引用前检查变量赋值路径",
+            "detail": "可以通过初始化或在所有分支赋值来避免。"
+          }
+        },
+        {
+          "category": "variable",
+          "severity": "warning",
+          "message": "变量 `test_wild_pointer_param` 可能在赋值前被使用。",
+          "file": "C:\\MUST\\OneDrive - Macau University of Science and Technology\\SoftwareEngineering\\project\\1031\\tests\\data\\test_comprehensive_examples.c",
+          "line": 522,
+          "column": 5,
+          "suggestion": {
+            "title": "在引用前检查变量赋值路径",
+            "detail": "可以通过初始化或在所有分支赋值来避免。"
+          }
+        },
+        {
+          "category": "variable",
+          "severity": "warning",
+          "message": "变量 `test_null_pointer_param` 可能在赋值前被使用。",
+          "file": "C:\\MUST\\OneDrive - Macau University of Science and Technology\\SoftwareEngineering\\project\\1031\\tests\\data\\test_comprehensive_examples.c",
+          "line": 523,
+          "column": 5,
+          "suggestion": {
+            "title": "在引用前检查变量赋值路径",
+            "detail": "可以通过初始化或在所有分支赋值来避免。"
+          }
+        },
+        {
+          "category": "variable",
+          "severity": "warning",
+          "message": "变量 `test_correct_pointer` 可能在赋值前被使用。",
+          "file": "C:\\MUST\\OneDrive - Macau University of Science and Technology\\SoftwareEngineering\\project\\1031\\tests\\data\\test_comprehensive_examples.c",
+          "line": 524,
+          "column": 5,
+          "suggestion": {
+            "title": "在引用前检查变量赋值路径",
+            "detail": "可以通过初始化或在所有分支赋值来避免。"
+          }
+        },
+        {
+          "category": "variable",
+          "severity": "warning",
+          "message": "变量 `test_printf_scanf_format` 可能在赋值前被使用。",
+          "file": "C:\\MUST\\OneDrive - Macau University of Science and Technology\\SoftwareEngineering\\project\\1031\\tests\\data\\test_comprehensive_examples.c",
+          "line": 527,
+          "column": 5,
+          "suggestion": {
+            "title": "在引用前检查变量赋值路径",
+            "detail": "可以通过初始化或在所有分支赋值来避免。"
+          }
+        },
+        {
+          "category": "variable",
+          "severity": "warning",
+          "message": "变量 `test_infinite_loops` 可能在赋值前被使用。",
+          "file": "C:\\MUST\\OneDrive - Macau University of Science and Technology\\SoftwareEngineering\\project\\1031\\tests\\data\\test_comprehensive_examples.c",
+          "line": 530,
+          "column": 5,
+          "suggestion": {
+            "title": "在引用前检查变量赋值路径",
+            "detail": "可以通过初始化或在所有分支赋值来避免。"
+          }
+        },
+        {
+          "category": "variable",
+          "severity": "warning",
+          "message": "变量 `test_use_after_free` 可能在赋值前被使用。",
+          "file": "C:\\MUST\\OneDrive - Macau University of Science and Technology\\SoftwareEngineering\\project\\1031\\tests\\data\\test_comprehensive_examples.c",
+          "line": 533,
+          "column": 5,
+          "suggestion": {
+            "title": "在引用前检查变量赋值路径",
+            "detail": "可以通过初始化或在所有分支赋值来避免。"
+          }
+        }
+      ],
+      "summary": {
+        "error": 2,
+        "warning": 91
+      }
+    }
+  ],
+  "raw_output": "文件: C:\\MUST\\OneDrive - Macau University of Science and Technology\\SoftwareEngineering\\project\\1031\\tests\\data\\test_comprehensive_examples.c\n统计: error=2, warning=91\n  [ERROR][memory] C:\\MUST\\OneDrive - Macau University of Science and Technology\\SoftwareEngineering\\project\\1031\\tests\\data\\test_comprehensive_examples.c:290:5: 指针 `ptr2` 可能为空却被解引用。\n    ↳ 建议: 在解引用 `ptr2` 前检查是否为空\n       例如: `if (ptr2 == NULL) { /* 错误处理 */ }`\n  [ERROR][memory] C:\\MUST\\OneDrive - Macau University of Science and Technology\\SoftwareEngineering\\project\\1031\\tests\\data\\test_comprehensive_examples.c:311:20: 指针 `ptr4` 可能为空却被解引用。\n    ↳ 建议: 在解引用 `ptr4` 前检查是否为空\n       例如: `if (ptr4 == NULL) { /* 错误处理 */ }`\n  [WARNING][variable] C:\\MUST\\OneDrive - Macau University of Science and Technology\\SoftwareEngineering\\project\\1031\\tests\\data\\test_comprehensive_examples.c:21:5: 变量 `p` 可能在赋值前被使用。\n    ↳ 建议: 在引用前检查变量赋值路径\n       可以通过初始化或在所有分支赋值来避免。\n  [WARNING][variable] C:\\MUST\\OneDrive - Macau University of Science and Technology\\SoftwareEngineering\\project\\1031\\tests\\data\\test_comprehensive_examples.c:26:5: 变量 `arr_ptr` 可能在赋值前被使用。\n    ↳ 建议: 在引用前检查变量赋值路径\n       可以通过初始化或在所有分支赋值来避免。\n  [WARNING][variable] C:\\MUST\\OneDrive - Macau University of Science and Technology\\SoftwareEngineering\\project\\1031\\tests\\data\\test_comprehensive_examples.c:31:5: 变量 `str_ptr` 可能在赋值前被使用。\n    ↳ 建议: 在引用前检查变量赋值路径\n       可以通过初始化或在所有分支赋值来避免。\n  [WARNING][variable] C:\\MUST\\OneDrive - Macau University of Science and Technology\\SoftwareEngineering\\project\\1031\\tests\\data\\test_comprehensive_examples.c:43:5: 变量 `test_wild_param` 可能在赋值前被使用。\n    ↳ 建议: 在引用前检查变量赋值路径\n       可以通过初始化或在所有分支赋值来避免。\n  [WARNING][variable] C:\\MUST\\OneDrive - Macau University of Science and Technology\\SoftwareEngineering\\project\\1031\\tests\\data\\test_comprehensive_examples.c:43:21: 变量 `wild_param` 可能在赋值前被使用。\n    ↳ 建议: 在引用前检查变量赋值路径\n       可以通过初始化或在所有分支赋值来避免。\n  [WARNING][variable] C:\\MUST\\OneDrive - Macau University of Science and Technology\\SoftwareEngineering\\project\\1031\\tests\\data\\test_comprehensive_examples.c:48:9: 变量 `loop_ptr` 可能在赋值前被使用。\n    ↳ 建议: 在引用前检查变量赋值路径\n       可以通过初始化或在所有分支赋值来避免。\n  [WARNING][variable] C:\\MUST\\OneDrive - Macau University of Science and Technology\\SoftwareEngineering\\project\\1031\\tests\\data\\test_comprehensive_examples.c:63:5: 变量 `nested_ptr` 可能在赋值前被使用。\n    ↳ 建议: 在引用前检查变量赋值路径\n       可以通过初始化或在所有分支赋值来避免。\n  [WARNING][variable] C:\\MUST\\OneDrive - Macau University of Science and Technology\\SoftwareEngineering\\project\\1031\\tests\\data\\test_comprehensive_examples.c:70:25: 变量 `get_wild_pointer` 可能在赋值前被使用。\n    ↳ 建议: 在引用前检查变量赋值路径\n       可以通过初始化或在所有分支赋值来避免。\n  [WARNING][memory] C:\\MUST\\OneDrive - Macau University of Science and Technology\\SoftwareEngineering\\project\\1031\\tests\\data\\test_comprehensive_examples.c:79:1: 函数 `test_memory_leak` 中分配次数(3)多于释放次数(0)，可能存在内存泄漏。\n    ↳ 建议: 为每一次动态分配配对调用 free\n       考虑使用 goto/清理块或智能指针样式封装确保释放。\n  [WARNING][variable] C:\\MUST\\OneDrive - Macau University of Science and Technology\\SoftwareEngineering\\project\\1031\\tests\\data\\test_comprehensive_examples.c:81:17: 变量 `malloc` 可能在赋值前被使用。\n    ↳ 建议: 在引用前检查变量赋值路径\n       可以通过初始化或在所有分支赋值来避免。\n  [WARNING][variable] C:\\MUST\\OneDrive - Macau University of Science and Technology\\SoftwareEngineering\\project\\1031\\tests\\data\\test_comprehensive_examples.c:83:20: 变量 `calloc` 可能在赋值前被使用。\n    ↳ 建议: 在引用前检查变量赋值路径\n       可以通过初始化或在所有分支赋值来避免。\n  [WARNING][variable] C:\\MUST\\OneDrive - Macau University of Science and Technology\\SoftwareEngineering\\project\\1031\\tests\\data\\test_comprehensive_examples.c:87:5: 变量 `strcpy` 可能在赋值前被使用。\n    ↳ 建议: 在引用前检查变量赋值路径\n       可以通过初始化或在所有分支赋值来避免。\n  [WARNING][variable] C:\\MUST\\OneDrive - Macau University of Science and Technology\\SoftwareEngineering\\project\\1031\\tests\\data\\test_comprehensive_examples.c:91:5: 变量 `printf` 可能在赋值前被使用。\n    ↳ 建议: 在引用前检查变量赋值路径\n       可以通过初始化或在所有分支赋值来避免。\n  [WARNING][variable] C:\\MUST\\OneDrive - Macau University of Science and Technology\\SoftwareEngineering\\project\\1031\\tests\\data\\test_comprehensive_examples.c:98:17: 变量 `malloc` 可能在赋值前被使用。\n    ↳ 建议: 在引用前检查变量赋值路径\n       可以通过初始化或在所有分支赋值来避免。\n  [WARNING][variable] C:\\MUST\\OneDrive - Macau University of Science and Technology\\SoftwareEngineering\\project\\1031\\tests\\data\\test_comprehensive_examples.c:103:9: 变量 `strcpy` 可能在赋值前被使用。\n    ↳ 建议: 在引用前检查变量赋值路径\n       可以通过初始化或在所有分支赋值来避免。\n  [WARNING][variable] C:\\MUST\\OneDrive - Macau University of Science and Technology\\SoftwareEngineering\\project\\1031\\tests\\data\\test_comprehensive_examples.c:105:9: 变量 `printf` 可能在赋值前被使用。\n    ↳ 建议: 在引用前检查变量赋值路径\n       可以通过初始化或在所有分支赋值来避免。\n  [WARNING][variable] C:\\MUST\\OneDrive - Macau University of Science and Technology\\SoftwareEngineering\\project\\1031\\tests\\data\\test_comprehensive_examples.c:109:9: 变量 `free` 可能在赋值前被使用。\n    ↳ 建议: 在引用前检查变量赋值路径\n       可以通过初始化或在所有分支赋值来避免。\n  [WARNING][memory] C:\\MUST\\OneDrive - Macau University of Science and Technology\\SoftwareEngineering\\project\\1031\\tests\\data\\test_comprehensive_examples.c:115:1: 函数 `test_partial_leak` 中分配次数(3)多于释放次数(2)，可能存在内存泄漏。\n    ↳ 建议: 为每一次动态分配配对调用 free\n       考虑使用 goto/清理块或智能指针样式封装确保释放。\n  [WARNING][variable] C:\\MUST\\OneDrive - Macau University of Science and Technology\\SoftwareEngineering\\project\\1031\\tests\\data\\test_comprehensive_examples.c:116:17: 变量 `malloc` 可能在赋值前被使用。\n    ↳ 建议: 在引用前检查变量赋值路径\n       可以通过初始化或在所有分支赋值来避免。\n  [WARNING][variable] C:\\MUST\\OneDrive - Macau University of Science and Technology\\SoftwareEngineering\\project\\1031\\tests\\data\\test_comprehensive_examples.c:122:9: 变量 `free` 可能在赋值前被使用。\n    ↳ 建议: 在引用前检查变量赋值路径\n       可以通过初始化或在所有分支赋值来避免。\n  [WARNING][variable] C:\\MUST\\OneDrive - Macau University of Science and Technology\\SoftwareEngineering\\project\\1031\\tests\\data\\test_comprehensive_examples.c:126:9: 变量 `strcpy` 可能在赋值前被使用。\n    ↳ 建议: 在引用前检查变量赋值路径\n       可以通过初始化或在所有分支赋值来避免。\n  [WARNING][memory] C:\\MUST\\OneDrive - Macau University of Science and Technology\\SoftwareEngineering\\project\\1031\\tests\\data\\test_comprehensive_examples.c:137:1: 函数 `test_realloc_leak` 中分配次数(2)多于释放次数(0)，可能存在内存泄漏。\n    ↳ 建议: 为每一次动态分配配对调用 free\n       考虑使用 goto/清理块或智能指针样式封装确保释放。\n  [WARNING][variable] C:\\MUST\\OneDrive - Macau University of Science and Technology\\SoftwareEngineering\\project\\1031\\tests\\data\\test_comprehensive_examples.c:138:17: 变量 `malloc` 可能在赋值前被使用。\n    ↳ 建议: 在引用前检查变量赋值路径\n       可以通过初始化或在所有分支赋值来避免。\n  [WARNING][variable] C:\\MUST\\OneDrive - Macau University of Science and Technology\\SoftwareEngineering\\project\\1031\\tests\\data\\test_comprehensive_examples.c:143:16: 变量 `realloc` 可能在赋值前被使用。\n    ↳ 建议: 在引用前检查变量赋值路径\n       可以通过初始化或在所有分支赋值来避免。\n  [WARNING][memory] C:\\MUST\\OneDrive - Macau University of Science and Technology\\SoftwareEngineering\\project\\1031\\tests\\data\\test_comprehensive_examples.c:152:1: 函数 `helper_function` 中分配次数(1)多于释放次数(0)，可能存在内存泄漏。\n    ↳ 建议: 为每一次动态分配配对调用 free\n       考虑使用 goto/清理块或智能指针样式封装确保释放。\n  [WARNING][variable] C:\\MUST\\OneDrive - Macau University of Science and Technology\\SoftwareEngineering\\project\\1031\\tests\\data\\test_comprehensive_examples.c:153:18: 变量 `malloc` 可能在赋值前被使用。\n    ↳ 建议: 在引用前检查变量赋值路径\n       可以通过初始化或在所有分支赋值来避免。\n  [WARNING][variable] C:\\MUST\\OneDrive - Macau University of Science and Technology\\SoftwareEngineering\\project\\1031\\tests\\data\\test_comprehensive_examples.c:155:9: 变量 `strcpy` 可能在赋值前被使用。\n    ↳ 建议: 在引用前检查变量赋值路径\n       可以通过初始化或在所有分支赋值来避免。\n  [WARNING][variable] C:\\MUST\\OneDrive - Macau University of Science and Technology\\SoftwareEngineering\\project\\1031\\tests\\data\\test_comprehensive_examples.c:161:17: 变量 `malloc` 可能在赋值前被使用。\n    ↳ 建议: 在引用前检查变量赋值路径\n       可以通过初始化或在所有分支赋值来避免。\n  [WARNING][variable] C:\\MUST\\OneDrive - Macau University of Science and Technology\\SoftwareEngineering\\project\\1031\\tests\\data\\test_comprehensive_examples.c:164:9: 变量 `free` 可能在赋值前被使用。\n    ↳ 建议: 在引用前检查变量赋值路径\n       可以通过初始化或在所有分支赋值来避免。\n  [WARNING][variable] C:\\MUST\\OneDrive - Macau University of Science and Technology\\SoftwareEngineering\\project\\1031\\tests\\data\\test_comprehensive_examples.c:167:9: 变量 `helper_function` 可能在赋值前被使用。\n    ↳ 建议: 在引用前检查变量赋值路径\n       可以通过初始化或在所有分支赋值来避免。\n  [WARNING][memory] C:\\MUST\\OneDrive - Macau University of Science and Technology\\SoftwareEngineering\\project\\1031\\tests\\data\\test_comprehensive_examples.c:172:1: 函数 `test_conditional_free` 中分配次数(2)多于释放次数(1)，可能存在内存泄漏。\n    ↳ 建议: 为每一次动态分配配对调用 free\n       考虑使用 goto/清理块或智能指针样式封装确保释放。\n  [WARNING][variable] C:\\MUST\\OneDrive - Macau University of Science and Technology\\SoftwareEngineering\\project\\1031\\tests\\data\\test_comprehensive_examples.c:173:17: 变量 `malloc` 可能在赋值前被使用。\n    ↳ 建议: 在引用前检查变量赋值路径\n       可以通过初始化或在所有分支赋值来避免。\n  [WARNING][variable] C:\\MUST\\OneDrive - Macau University of Science and Technology\\SoftwareEngineering\\project\\1031\\tests\\data\\test_comprehensive_examples.c:178:9: 变量 `strcpy` 可能在赋值前被使用。\n    ↳ 建议: 在引用前检查变量赋值路径\n       可以通过初始化或在所有分支赋值来避免。\n  [WARNING][variable] C:\\MUST\\OneDrive - Macau University of Science and Technology\\SoftwareEngineering\\project\\1031\\tests\\data\\test_comprehensive_examples.c:182:13: 变量 `free` 可能在赋值前被使用。\n    ↳ 建议: 在引用前检查变量赋值路径\n       可以通过初始化或在所有分支赋值来避免。\n  [WARNING][variable] C:\\MUST\\OneDrive - Macau University of Science and Technology\\SoftwareEngineering\\project\\1031\\tests\\data\\test_comprehensive_examples.c:242:5: 变量 `p1` 可能在赋值前被使用。\n    ↳ 建议: 在引用前检查变量赋值路径\n       可以通过初始化或在所有分支赋值来避免。\n  [WARNING][variable] C:\\MUST\\OneDrive - Macau University of Science and Technology\\SoftwareEngineering\\project\\1031\\tests\\data\\test_comprehensive_examples.c:243:5: 变量 `p2` 可能在赋值前被使用。\n    ↳ 建议: 在引用前检查变量赋值路径\n       可以通过初始化或在所有分支赋值来避免。\n  [WARNING][variable] C:\\MUST\\OneDrive - Macau University of Science and Technology\\SoftwareEngineering\\project\\1031\\tests\\data\\test_comprehensive_examples.c:244:5: 变量 `p3` 可能在赋值前被使用。\n    ↳ 建议: 在引用前检查变量赋值路径\n       可以通过初始化或在所有分支赋值来避免。\n  [WARNING][variable] C:\\MUST\\OneDrive - Macau University of Science and Technology\\SoftwareEngineering\\project\\1031\\tests\\data\\test_comprehensive_examples.c:245:5: 变量 `p4` 可能在赋值前被使用。\n    ↳ 建议: 在引用前检查变量赋值路径\n       可以通过初始化或在所有分支赋值来避免。\n  [WARNING][variable] C:\\MUST\\OneDrive - Macau University of Science and Technology\\SoftwareEngineering\\project\\1031\\tests\\data\\test_comprehensive_examples.c:248:5: 变量 `point1` 可能在赋值前被使用。\n    ↳ 建议: 在引用前检查变量赋值路径\n       可以通过初始化或在所有分支赋值来避免。\n  [WARNING][variable] C:\\MUST\\OneDrive - Macau University of Science and Technology\\SoftwareEngineering\\project\\1031\\tests\\data\\test_comprehensive_examples.c:252:5: 变量 `points` 可能在赋值前被使用。\n    ↳ 建议: 在引用前检查变量赋值路径\n       可以通过初始化或在所有分支赋值来避免。\n  [WARNING][variable] C:\\MUST\\OneDrive - Macau University of Science and Technology\\SoftwareEngineering\\project\\1031\\tests\\data\\test_comprehensive_examples.c:256:5: 变量 `ptr_array` 可能在赋值前被使用。\n    ↳ 建议: 在引用前检查变量赋值路径\n       可以通过初始化或在所有分支赋值来避免。\n  [WARNING][variable] C:\\MUST\\OneDrive - Macau University of Science and Technology\\SoftwareEngineering\\project\\1031\\tests\\data\\test_comprehensive_examples.c:259:5: 变量 `node1` 可能在赋值前被使用。\n    ↳ 建议: 在引用前检查变量赋值路径\n       可以通过初始化或在所有分支赋值来避免。\n  [WARNING][variable] C:\\MUST\\OneDrive - Macau University of Science and Technology\\SoftwareEngineering\\project\\1031\\tests\\data\\test_comprehensive_examples.c:260:5: 变量 `node_ptr` 可能在赋值前被使用。\n    ↳ 建议: 在引用前检查变量赋值路径\n       可以通过初始化或在所有分支赋值来避免。\n  [WARNING][variable] C:\\MUST\\OneDrive - Macau University of Science and Technology\\SoftwareEngineering\\project\\1031\\tests\\data\\test_comprehensive_examples.c:263:5: 变量 `graph1` 可能在赋值前被使用。\n    ↳ 建议: 在引用前检查变量赋值路径\n       可以通过初始化或在所有分支赋值来避免。\n  [WARNING][variable] C:\\MUST\\OneDrive - Macau University of Science and Technology\\SoftwareEngineering\\project\\1031\\tests\\data\\test_comprehensive_examples.c:264:5: 变量 `graph_ptr` 可能在赋值前被使用。\n    ↳ 建议: 在引用前检查变量赋值路径\n       可以通过初始化或在所有分支赋值来避免。\n  [WARNING][variable] C:\\MUST\\OneDrive - Macau University of Science and Technology\\SoftwareEngineering\\project\\1031\\tests\\data\\test_comprehensive_examples.c:267:5: 变量 `student1` 可能在赋值前被使用。\n    ↳ 建议: 在引用前检查变量赋值路径\n       可以通过初始化或在所有分支赋值来避免。\n  [WARNING][variable] C:\\MUST\\OneDrive - Macau University of Science and Technology\\SoftwareEngineering\\project\\1031\\tests\\data\\test_comprehensive_examples.c:268:5: 变量 `student_ptr` 可能在赋值前被使用。\n    ↳ 建议: 在引用前检查变量赋值路径\n       可以通过初始化或在所有分支赋值来避免。\n  [WARNING][variable] C:\\MUST\\OneDrive - Macau University of Science and Technology\\SoftwareEngineering\\project\\1031\\tests\\data\\test_comprehensive_examples.c:281:5: 变量 `str1` 可能在赋值前被使用。\n    ↳ 建议: 在引用前检查变量赋值路径\n       可以通过初始化或在所有分支赋值来避免。\n  [WARNING][variable] C:\\MUST\\OneDrive - Macau University of Science and Technology\\SoftwareEngineering\\project\\1031\\tests\\data\\test_comprehensive_examples.c:284:5: 变量 `arr1` 可能在赋值前被使用。\n    ↳ 建议: 在引用前检查变量赋值路径\n       可以通过初始化或在所有分支赋值来避免。\n  [WARNING][variable] C:\\MUST\\OneDrive - Macau University of Science and Technology\\SoftwareEngineering\\project\\1031\\tests\\data\\test_comprehensive_examples.c:302:5: 变量 `printf` 可能在赋值前被使用。\n    ↳ 建议: 在引用前检查变量赋值路径\n       可以通过初始化或在所有分支赋值来避免。\n  [WARNING][variable] C:\\MUST\\OneDrive - Macau University of Science and Technology\\SoftwareEngineering\\project\\1031\\tests\\data\\test_comprehensive_examples.c:302:21: 变量 `ptr3` 可能在赋值前被使用。\n    ↳ 建议: 在引用前检查变量赋值路径\n       可以通过初始化或在所有分支赋值来避免。\n  [WARNING][variable] C:\\MUST\\OneDrive - Macau University of Science and Technology\\SoftwareEngineering\\project\\1031\\tests\\data\\test_comprehensive_examples.c:305:5: 变量 `scanf` 可能在赋值前被使用。\n    ↳ 建议: 在引用前检查变量赋值路径\n       可以通过初始化或在所有分支赋值来避免。\n  [WARNING][variable] C:\\MUST\\OneDrive - Macau University of Science and Technology\\SoftwareEngineering\\project\\1031\\tests\\data\\test_comprehensive_examples.c:305:17: 变量 `str3` 可能在赋值前被使用。\n    ↳ 建议: 在引用前检查变量赋值路径\n       可以通过初始化或在所有分支赋值来避免。\n  [WARNING][variable] C:\\MUST\\OneDrive - Macau University of Science and Technology\\SoftwareEngineering\\project\\1031\\tests\\data\\test_comprehensive_examples.c:311:5: 变量 `printf` 可能在赋值前被使用。\n    ↳ 建议: 在引用前检查变量赋值路径\n       可以通过初始化或在所有分支赋值来避免。\n  [WARNING][memory] C:\\MUST\\OneDrive - Macau University of Science and Technology\\SoftwareEngineering\\project\\1031\\tests\\data\\test_comprehensive_examples.c:311:20: 指针 `ptr4` 可能为空却被作为参数传递。\n    ↳ 建议: 在传入指针参数前进行空指针检查\n       确保 `ptr4` 在调用前已经被赋值为有效地址。\n  [WARNING][variable] C:\\MUST\\OneDrive - Macau University of Science and Technology\\SoftwareEngineering\\project\\1031\\tests\\data\\test_comprehensive_examples.c:314:5: 变量 `scanf` 可能在赋值前被使用。\n    ↳ 建议: 在引用前检查变量赋值路径\n       可以通过初始化或在所有分支赋值来避免。\n  [WARNING][memory] C:\\MUST\\OneDrive - Macau University of Science and Technology\\SoftwareEngineering\\project\\1031\\tests\\data\\test_comprehensive_examples.c:314:17: 指针 `str4` 可能为空却被作为参数传递。\n    ↳ 建议: 在传入指针参数前进行空指针检查\n       确保 `str4` 在调用前已经被赋值为有效地址。\n  [WARNING][variable] C:\\MUST\\OneDrive - Macau University of Science and Technology\\SoftwareEngineering\\project\\1031\\tests\\data\\test_comprehensive_examples.c:321:5: 变量 `printf` 可能在赋值前被使用。\n    ↳ 建议: 在引用前检查变量赋值路径\n       可以通过初始化或在所有分支赋值来避免。\n  [WARNING][variable] C:\\MUST\\OneDrive - Macau University of Science and Technology\\SoftwareEngineering\\project\\1031\\tests\\data\\test_comprehensive_examples.c:324:18: 变量 `str5` 可能在赋值前被使用。\n    ↳ 建议: 在引用前检查变量赋值路径\n       可以通过初始化或在所有分支赋值来避免。\n  [WARNING][variable] C:\\MUST\\OneDrive - Macau University of Science and Technology\\SoftwareEngineering\\project\\1031\\tests\\data\\test_comprehensive_examples.c:327:17: 变量 `malloc` 可能在赋值前被使用。\n    ↳ 建议: 在引用前检查变量赋值路径\n       可以通过初始化或在所有分支赋值来避免。\n  [WARNING][variable] C:\\MUST\\OneDrive - Macau University of Science and Technology\\SoftwareEngineering\\project\\1031\\tests\\data\\test_comprehensive_examples.c:331:9: 变量 `free` 可能在赋值前被使用。\n    ↳ 建议: 在引用前检查变量赋值路径\n       可以通过初始化或在所有分支赋值来避免。\n  [WARNING][variable] C:\\MUST\\OneDrive - Macau University of Science and Technology\\SoftwareEngineering\\project\\1031\\tests\\data\\test_comprehensive_examples.c:343:5: 变量 `printf` 可能在赋值前被使用。\n    ↳ 建议: 在引用前检查变量赋值路径\n       可以通过初始化或在所有分支赋值来避免。\n  [WARNING][variable] C:\\MUST\\OneDrive - Macau University of Science and Technology\\SoftwareEngineering\\project\\1031\\tests\\data\\test_comprehensive_examples.c:363:5: 变量 `printf` 可能在赋值前被使用。\n    ↳ 建议: 在引用前检查变量赋值路径\n       可以通过初始化或在所有分支赋值来避免。\n  [WARNING][memory] C:\\MUST\\OneDrive - Macau University of Science and Technology\\SoftwareEngineering\\project\\1031\\tests\\data\\test_comprehensive_examples.c:391:28: 指针 `j` 可能为空却被作为参数传递。\n    ↳ 建议: 在传入指针参数前进行空指针检查\n       确保 `j` 在调用前已经被赋值为有效地址。\n  [WARNING][memory] C:\\MUST\\OneDrive - Macau University of Science and Technology\\SoftwareEngineering\\project\\1031\\tests\\data\\test_comprehensive_examples.c:397:28: 指针 `k` 可能为空却被作为参数传递。\n    ↳ 建议: 在传入指针参数前进行空指针检查\n       确保 `k` 在调用前已经被赋值为有效地址。\n  [WARNING][memory] C:\\MUST\\OneDrive - Macau University of Science and Technology\\SoftwareEngineering\\project\\1031\\tests\\data\\test_comprehensive_examples.c:404:28: 指针 `m` 可能为空却被作为参数传递。\n    ↳ 建议: 在传入指针参数前进行空指针检查\n       确保 `m` 在调用前已经被赋值为有效地址。\n  [WARNING][memory] C:\\MUST\\OneDrive - Macau University of Science and Technology\\SoftwareEngineering\\project\\1031\\tests\\data\\test_comprehensive_examples.c:412:44: 指针 `outer` 可能为空却被作为参数传递。\n    ↳ 建议: 在传入指针参数前进行空指针检查\n       确保 `outer` 在调用前已经被赋值为有效地址。\n  [WARNING][memory] C:\\MUST\\OneDrive - Macau University of Science and Technology\\SoftwareEngineering\\project\\1031\\tests\\data\\test_comprehensive_examples.c:412:51: 指针 `inner` 可能为空却被作为参数传递。\n    ↳ 建议: 在传入指针参数前进行空指针检查\n       确保 `inner` 在调用前已经被赋值为有效地址。\n  [WARNING][memory] C:\\MUST\\OneDrive - Macau University of Science and Technology\\SoftwareEngineering\\project\\1031\\tests\\data\\test_comprehensive_examples.c:430:34: 指针 `counter` 可能为空却被作为参数传递。\n    ↳ 建议: 在传入指针参数前进行空指针检查\n       确保 `counter` 在调用前已经被赋值为有效地址。\n  [WARNING][memory] C:\\MUST\\OneDrive - Macau University of Science and Technology\\SoftwareEngineering\\project\\1031\\tests\\data\\test_comprehensive_examples.c:438:28: 指针 `n` 可能为空却被作为参数传递。\n    ↳ 建议: 在传入指针参数前进行空指针检查\n       确保 `n` 在调用前已经被赋值为有效地址。\n  [WARNING][variable] C:\\MUST\\OneDrive - Macau University of Science and Technology\\SoftwareEngineering\\project\\1031\\tests\\data\\test_comprehensive_examples.c:462:17: 变量 `malloc` 可能在赋值前被使用。\n    ↳ 建议: 在引用前检查变量赋值路径\n       可以通过初始化或在所有分支赋值来避免。\n  [WARNING][variable] C:\\MUST\\OneDrive - Macau University of Science and Technology\\SoftwareEngineering\\project\\1031\\tests\\data\\test_comprehensive_examples.c:464:5: 变量 `free` 可能在赋值前被使用。\n    ↳ 建议: 在引用前检查变量赋值路径\n       可以通过初始化或在所有分支赋值来避免。\n  [WARNING][variable] C:\\MUST\\OneDrive - Macau University of Science and Technology\\SoftwareEngineering\\project\\1031\\tests\\data\\test_comprehensive_examples.c:465:5: 变量 `printf` 可能在赋值前被使用。\n    ↳ 建议: 在引用前检查变量赋值路径\n       可以通过初始化或在所有分支赋值来避免。\n  [WARNING][memory] C:\\MUST\\OneDrive - Macau University of Science and Technology\\SoftwareEngineering\\project\\1031\\tests\\data\\test_comprehensive_examples.c:474:24: 指针 `i` 可能为空却被作为参数传递。\n    ↳ 建议: 在传入指针参数前进行空指针检查\n       确保 `i` 在调用前已经被赋值为有效地址。\n  [WARNING][variable] C:\\MUST\\OneDrive - Macau University of Science and Technology\\SoftwareEngineering\\project\\1031\\tests\\data\\test_comprehensive_examples.c:503:5: 变量 `printf` 可能在赋值前被使用。\n    ↳ 建议: 在引用前检查变量赋值路径\n       可以通过初始化或在所有分支赋值来避免。\n  [WARNING][variable] C:\\MUST\\OneDrive - Macau University of Science and Technology\\SoftwareEngineering\\project\\1031\\tests\\data\\test_comprehensive_examples.c:506:5: 变量 `test_wild_pointer` 可能在赋值前被使用。\n    ↳ 建议: 在引用前检查变量赋值路径\n       可以通过初始化或在所有分支赋值来避免。\n  [WARNING][variable] C:\\MUST\\OneDrive - Macau University of Science and Technology\\SoftwareEngineering\\project\\1031\\tests\\data\\test_comprehensive_examples.c:509:5: 变量 `test_memory_leak` 可能在赋值前被使用。\n    ↳ 建议: 在引用前检查变量赋值路径\n       可以通过初始化或在所有分支赋值来避免。\n  [WARNING][variable] C:\\MUST\\OneDrive - Macau University of Science and Technology\\SoftwareEngineering\\project\\1031\\tests\\data\\test_comprehensive_examples.c:510:5: 变量 `test_correct_free` 可能在赋值前被使用。\n    ↳ 建议: 在引用前检查变量赋值路径\n       可以通过初始化或在所有分支赋值来避免。\n  [WARNING][variable] C:\\MUST\\OneDrive - Macau University of Science and Technology\\SoftwareEngineering\\project\\1031\\tests\\data\\test_comprehensive_examples.c:511:5: 变量 `test_partial_leak` 可能在赋值前被使用。\n    ↳ 建议: 在引用前检查变量赋值路径\n       可以通过初始化或在所有分支赋值来避免。\n  [WARNING][variable] C:\\MUST\\OneDrive - Macau University of Science and Technology\\SoftwareEngineering\\project\\1031\\tests\\data\\test_comprehensive_examples.c:512:5: 变量 `test_realloc_leak` 可能在赋值前被使用。\n    ↳ 建议: 在引用前检查变量赋值路径\n       可以通过初始化或在所有分支赋值来避免。\n  [WARNING][variable] C:\\MUST\\OneDrive - Macau University of Science and Technology\\SoftwareEngineering\\project\\1031\\tests\\data\\test_comprehensive_examples.c:513:5: 变量 `test_nested_leak` 可能在赋值前被使用。\n    ↳ 建议: 在引用前检查变量赋值路径\n       可以通过初始化或在所有分支赋值来避免。\n  [WARNING][variable] C:\\MUST\\OneDrive - Macau University of Science and Technology\\SoftwareEngineering\\project\\1031\\tests\\data\\test_comprehensive_examples.c:514:5: 变量 `test_conditional_free` 可能在赋值前被使用。\n    ↳ 建议: 在引用前检查变量赋值路径\n       可以通过初始化或在所有分支赋值来避免。\n  [WARNING][variable] C:\\MUST\\OneDrive - Macau University of Science and Technology\\SoftwareEngineering\\project\\1031\\tests\\data\\test_comprehensive_examples.c:517:5: 变量 `test_struct_pointer_declarations` 可能在赋值前被使用。\n    ↳ 建议: 在引用前检查变量赋值路径\n       可以通过初始化或在所有分支赋值来避免。\n  [WARNING][variable] C:\\MUST\\OneDrive - Macau University of Science and Technology\\SoftwareEngineering\\project\\1031\\tests\\data\\test_comprehensive_examples.c:520:5: 变量 `test_wild_pointer_example4` 可能在赋值前被使用。\n    ↳ 建议: 在引用前检查变量赋值路径\n       可以通过初始化或在所有分支赋值来避免。\n  [WARNING][variable] C:\\MUST\\OneDrive - Macau University of Science and Technology\\SoftwareEngineering\\project\\1031\\tests\\data\\test_comprehensive_examples.c:521:5: 变量 `test_null_pointer` 可能在赋值前被使用。\n    ↳ 建议: 在引用前检查变量赋值路径\n       可以通过初始化或在所有分支赋值来避免。\n  [WARNING][variable] C:\\MUST\\OneDrive - Macau University of Science and Technology\\SoftwareEngineering\\project\\1031\\tests\\data\\test_comprehensive_examples.c:522:5: 变量 `test_wild_pointer_param` 可能在赋值前被使用。\n    ↳ 建议: 在引用前检查变量赋值路径\n       可以通过初始化或在所有分支赋值来避免。\n  [WARNING][variable] C:\\MUST\\OneDrive - Macau University of Science and Technology\\SoftwareEngineering\\project\\1031\\tests\\data\\test_comprehensive_examples.c:523:5: 变量 `test_null_pointer_param` 可能在赋值前被使用。\n    ↳ 建议: 在引用前检查变量赋值路径\n       可以通过初始化或在所有分支赋值来避免。\n  [WARNING][variable] C:\\MUST\\OneDrive - Macau University of Science and Technology\\SoftwareEngineering\\project\\1031\\tests\\data\\test_comprehensive_examples.c:524:5: 变量 `test_correct_pointer` 可能在赋值前被使用。\n    ↳ 建议: 在引用前检查变量赋值路径\n       可以通过初始化或在所有分支赋值来避免。\n  [WARNING][variable] C:\\MUST\\OneDrive - Macau University of Science and Technology\\SoftwareEngineering\\project\\1031\\tests\\data\\test_comprehensive_examples.c:527:5: 变量 `test_printf_scanf_format` 可能在赋值前被使用。\n    ↳ 建议: 在引用前检查变量赋值路径\n       可以通过初始化或在所有分支赋值来避免。\n  [WARNING][variable] C:\\MUST\\OneDrive - Macau University of Science and Technology\\SoftwareEngineering\\project\\1031\\tests\\data\\test_comprehensive_examples.c:530:5: 变量 `test_infinite_loops` 可能在赋值前被使用。\n    ↳ 建议: 在引用前检查变量赋值路径\n       可以通过初始化或在所有分支赋值来避免。\n  [WARNING][variable] C:\\MUST\\OneDrive - Macau University of Science and Technology\\SoftwareEngineering\\project\\1031\\tests\\data\\test_comprehensive_examples.c:533:5: 变量 `test_use_after_free` 可能在赋值前被使用。\n    ↳ 建议: 在引用前检查变量赋值路径\n       可以通过初始化或在所有分支赋值来避免。",
+  "metrics": {
+    "total_issues": 93,
+    "true_positive": 1,
+    "false_positive": 92,
+    "false_negative": 4
+  },
+  "expected_reference": [
+    {
+      "category": "memory",
+      "line": 12
+    },
+    {
+      "category": "memory",
+      "line": 290
+    },
+    {
+      "category": "stdlib",
+      "line": 343
+    },
+    {
+      "category": "stdlib",
+      "line": 354
+    },
+    {
+      "category": "numeric",
+      "line": 364
+    }
+  ]
+}
