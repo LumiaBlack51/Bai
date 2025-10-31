@@ -1,0 +1,102 @@
+{
+  "name": "c-bug-detector",
+  "displayName": "C Bug Detector",
+  "description": "调用 Python 后端，在 VSCode 中检测 C 语言常见缺陷并高亮问题。",
+  "version": "0.1.0",
+  "publisher": "mustlabs",
+  "license": "MIT",
+  "engines": {
+    "vscode": "^1.75.0"
+  },
+  "categories": [
+    "Linters",
+    "Other"
+  ],
+  "main": "./extension.js",
+  "activationEvents": [
+    "onCommand:cBugDetector.runAnalysis",
+    "onView:cBugDetector.reportView",
+    "workspaceContains:backend/cli.py"
+  ],
+  "contributes": {
+    "commands": [
+      {
+        "command": "cBugDetector.runAnalysis",
+        "title": "C Bug Detector: 运行当前文件检测"
+      },
+      {
+        "command": "cBugDetector.openIssue",
+        "title": "C Bug Detector: 打开问题位置"
+      }
+    ],
+    "keybindings": [
+      {
+        "command": "cBugDetector.runAnalysis",
+        "key": "ctrl+alt+d",
+        "mac": "cmd+alt+d",
+        "when": "editorLangId == c || editorLangId == cpp"
+      }
+    ],
+    "menus": {
+      "editor/title": [
+        {
+          "command": "cBugDetector.runAnalysis",
+          "group": "navigation@4",
+          "when": "resourceLangId == c || resourceLangId == cpp"
+        }
+      ],
+      "explorer/context": [
+        {
+          "command": "cBugDetector.runAnalysis",
+          "group": "navigation@4",
+          "when": "resourceExtname == .c || resourceExtname == .h"
+        }
+      ]
+    },
+    "viewsContainers": {
+      "activitybar": [
+        {
+          "id": "cBugDetector",
+          "title": "C Bug Detector",
+          "icon": "resources/icon.svg"
+        }
+      ]
+    },
+    "views": {
+      "cBugDetector": [
+        {
+          "id": "cBugDetector.reportView",
+          "name": "分析报告"
+        }
+      ]
+    },
+    "configuration": {
+      "type": "object",
+      "title": "C Bug Detector 配置",
+      "properties": {
+        "cBugDetector.pythonPath": {
+          "type": "string",
+          "default": "python",
+          "description": "运行后端分析器时使用的 Python 可执行文件路径。"
+        },
+        "cBugDetector.extraArgs": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          },
+          "default": [],
+          "description": "调用后端时附加的命令行参数，例如 include 路径。"
+        }
+      }
+    }
+  },
+  "scripts": {
+    "lint": "echo 'No lint configured'",
+    "package": "vsce package"
+  },
+  "dependencies": {
+  },
+  "devDependencies": {
+  }
+}
+

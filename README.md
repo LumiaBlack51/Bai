@@ -31,6 +31,12 @@ python tests/run_tests.py
 - `metrics`：真阳性、错报、漏报统计；
 - `expected_reference`：用于比对的预期样例。
 
+## VSCode 插件使用
+- 进入 `frontend/vscode-extension/` 并执行 `npm install`（如需打包可使用 `npx vsce package`）。
+- 在 VSCode 中使用 “运行扩展” 或安装打包好的 VSIX，即可启用 `C Bug Detector` 侧边栏。
+- 快捷键 `Ctrl+Alt+D`（macOS `Cmd+Alt+D`）或编辑器标题栏按钮可对当前文件运行检测。
+- 检测结果会同时出现在 *Problems* 面板与 `C Bug Detector` 视图，支持点击跳转、查看建议。
+
 ## GitHub 提交指引
 1. 在 GitHub 创建新的空仓库（例如 `c-bug-detector`）。
 2. 在本地初始化仓库：
