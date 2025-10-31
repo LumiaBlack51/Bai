@@ -4,7 +4,7 @@ from __future__ import annotations
 
 import re
 
-from typing import Iterable, List
+from typing import Dict, Iterable, List, Optional
 
 from .base import Checker
 from .context import AnalysisContext
@@ -18,25 +18,32 @@ class NumericControlChecker(Checker):
     def run(self, context: AnalysisContext) -> Iterable[Issue]:
         cindex = load_clang()
         issues: List[Issue] = []
+        first_infinite_loop_line: Dict[object, int] = {}
 
-        for node in self._walk(context.translation_unit.cursor, context):
+        for node, func_cursor in self._walk(context.translation_unit.cursor, context):
             if node.kind == cindex.CursorKind.BINARY_OPERATOR:
                 issues.extend(self._check_division(node))
             elif node.kind in {cindex.CursorKind.WHILE_STMT, cindex.CursorKind.FOR_STMT}:
-                issues.extend(self._check_loop(node))
+                issues.extend(self._check_loop(node, func_cursor, first_infinite_loop_line))
             elif node.kind == cindex.CursorKind.COMPOUND_STMT:
                 issues.extend(self._check_unreachable(node))
 
         return issues
 
     def _walk(self, cursor, context):
-        stack = [cursor]
+        cindex = load_clang()
+        stack: List[tuple["clang.cindex.Cursor", Optional["clang.cindex.Cursor"]]] = [(cursor, None)]  # type: ignore[name-defined]
         while stack:
-            current = stack.pop()
+            current, func_cursor = stack.pop()
             if current.location.file and current.location.file.name != str(context.source):
                 continue
-            yield current
-            stack.extend(list(current.get_children()))
+            yield current, func_cursor
+            next_func = func_cursor
+            if current.kind == cindex.CursorKind.FUNCTION_DECL:
+                next_func = current
+            children = list(current.get_children())
+            for child in reversed(children):
+                stack.append((child, next_func))
 
     def _check_division(self, cursor) -> Iterable[Issue]:
         tokens = list(collect_tokens(cursor))
@@ -62,13 +69,19 @@ class NumericControlChecker(Checker):
             ]
         return []
 
-    def _check_loop(self, cursor) -> Iterable[Issue]:
-        if not self._is_reachable(cursor):
-            return []
+    def _check_loop(self, cursor, func_cursor, infinite_registry: Dict[object, int]) -> Iterable[Issue]:
+        if func_cursor is not None:
+            recorded = infinite_registry.get(func_cursor)
+            if recorded is not None and cursor.location.line and cursor.location.line > recorded:
+                return []
 
         tokens = list(collect_tokens(cursor))
         text = "".join(tokens)
         if self._loop_is_definitely_infinite(cursor, tokens=tokens, text=text):
+            if func_cursor is not None:
+                recorded = infinite_registry.get(func_cursor)
+                if recorded is None or (cursor.location.line and cursor.location.line < recorded):
+                    infinite_registry[func_cursor] = cursor.location.line or recorded or 0
             return [self._build_loop_issue(cursor)]
         return []
 
@@ -90,15 +103,17 @@ class NumericControlChecker(Checker):
 
     def _is_reachable(self, cursor) -> bool:
         cindex = load_clang()
-        parent = cursor.semantic_parent
+        parent = cursor.semantic_parent or cursor.lexical_parent
         if not parent:
             return True
 
         siblings = list(parent.get_children())
+        cursor_file = str(cursor.location.file.name) if cursor.location.file else None
         for child in siblings:
             if child == cursor:
                 return True
-            if child.location.file and child.location.file != cursor.location.file:
+            child_file = str(child.location.file.name) if child.location.file else None
+            if child_file and cursor_file and child_file != cursor_file:
                 continue
             if child.kind in {cindex.CursorKind.RETURN_STMT, cindex.CursorKind.BREAK_STMT}:
                 return False

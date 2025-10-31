@@ -99,16 +99,23 @@ class MemorySafetyChecker(Checker):
             pointer_null.discard(name)
             freed_pointers.discard(name)
 
-        def report_pointer_use(name: Optional[str], node, *, allow_freed: bool = False) -> None:
+        def report_pointer_use(
+            name: Optional[str],
+            node,
+            *,
+            allow_freed: bool = False,
+            guards: Optional[Set[str]] = None,
+        ) -> None:
             if not name:
                 return
+            guards = guards or set()
             location_key = (name, node.location.line, node.location.column or 0)
             if name in freed_pointers and not allow_freed:
                 if location_key not in reported_uaf:
                     reported_uaf.add(location_key)
                     issues.append(self._build_use_after_free_issue(node, name))
                 return
-            if name in pointer_null:
+            if name in pointer_null and name not in guards and name not in freed_pointers:
                 if location_key not in reported_null:
                     reported_null.add(location_key)
                     issues.append(self._build_null_deref_issue(node, name))
@@ -148,9 +155,18 @@ class MemorySafetyChecker(Checker):
                 if child.spelling and size is not None:
                     array_sizes[child.spelling] = size
 
-        for node in self._walk(cursor):
+        def traverse(node, guards: frozenset[str]) -> None:
+            nonlocal allocation_calls, free_calls, returns_uninitialized_pointer
             if node is cursor:
-                continue
+                for child in node.get_children():
+                    traverse(child, guards)
+                return
+
+            if node.kind == cindex.CursorKind.FUNCTION_DECL:
+                return
+
+            tokens = list(collect_tokens(node))
+            child_guard_context = guards
 
             if node.kind == cindex.CursorKind.VAR_DECL and getattr(node.type, "kind", None) == cindex.TypeKind.POINTER:
                 parent = node.semantic_parent
@@ -167,8 +183,6 @@ class MemorySafetyChecker(Checker):
                                 pointer_null.add(name)
                             else:
                                 mark_initialized(name)
-
-            tokens = list(collect_tokens(node))
 
             if node.kind == cindex.CursorKind.BINARY_OPERATOR and tokens and "=" in tokens:
                 target = self._resolve_assignment_target(node)
@@ -193,6 +207,7 @@ class MemorySafetyChecker(Checker):
 
             if node.kind == cindex.CursorKind.CALL_EXPR:
                 callee = self._resolve_callee(node)
+                extra_safe: Set[str] = set()
                 if callee in {"malloc", "calloc", "realloc"}:
                     allocation_calls += 1
                 elif callee == "free":
@@ -205,39 +220,34 @@ class MemorySafetyChecker(Checker):
                         if arg_name in freed_pointers and location_key not in reported_double_free:
                             reported_double_free.add(location_key)
                             issues.append(self._build_double_free_issue(argument, arg_name))
-                        report_pointer_use(arg_name, argument, allow_freed=True)
+                        report_pointer_use(arg_name, argument, allow_freed=True, guards=set(guards))
                         freed_pointers.add(arg_name)
                         pointer_null.add(arg_name)
+                        extra_safe.add(arg_name)
                 else:
-                    if callee in self._leaky_functions:
-                        key = (callee, node.location.line, node.location.column or 0)
-                        if key not in reported_leaky_calls:
-                            reported_leaky_calls.add(key)
-                            issues.append(self._build_leaky_call_issue(node, callee))
-                    if callee in self._unsafe_pointer_returners:
-                        key = (callee, node.location.line, node.location.column or 0)
-                        if key not in reported_leaky_calls:
-                            reported_leaky_calls.add(key)
-                            issues.append(self._build_unsafe_return_call_issue(node, callee))
+                    pass  # 避免在调用点重复报告泄漏/野指针返回
 
                 for argument in node.get_arguments():
                     arg_name = self._resolve_decl_name(argument) or self._first_decl_ref_name(argument)
                     if arg_name:
-                        report_pointer_use(arg_name, argument, allow_freed=(callee == "free"))
+                        report_pointer_use(arg_name, argument, allow_freed=(callee == "free"), guards=set(guards))
+
+                if extra_safe:
+                    child_guard_context = frozenset(set(guards).union(extra_safe))
 
             if node.kind == cindex.CursorKind.UNARY_OPERATOR and tokens and "*" in tokens:
                 name = self._first_decl_ref_name(node)
-                report_pointer_use(name, node)
+                report_pointer_use(name, node, guards=set(guards))
 
             if node.kind == cindex.CursorKind.MEMBER_REF_EXPR and tokens and "->" in tokens:
                 base_child = next(iter(node.get_children()), None)
                 base_name = self._resolve_decl_name(base_child) if base_child else self._first_decl_ref_name(node)
-                report_pointer_use(base_name, node)
+                report_pointer_use(base_name, node, guards=set(guards))
 
             if node.kind == cindex.CursorKind.ARRAY_SUBSCRIPT_EXPR:
                 children = list(node.get_children())
                 base_name = self._resolve_decl_name(children[0]) if children else None
-                report_pointer_use(base_name, node)
+                report_pointer_use(base_name, node, guards=set(guards))
                 array_issue = self._check_array_bounds(node, array_sizes)
                 if array_issue:
                     issues.append(array_issue)
@@ -246,9 +256,30 @@ class MemorySafetyChecker(Checker):
                 decl_names = self._collect_decl_ref_names(node)
                 for name in decl_names:
                     if name in pointer_vars or name in self._global_uninitialized:
-                        report_pointer_use(name, node)
+                        report_pointer_use(name, node, guards=set(guards))
                         if name in local_uninitialized or name in self._global_uninitialized:
                             returns_uninitialized_pointer = True
+
+            if node.kind == cindex.CursorKind.IF_STMT:
+                children = list(node.get_children())
+                if not children:
+                    return
+                condition = children[0]
+                traverse(condition, guards)
+                guarded = self._extract_guarded_pointers(condition, pointer_vars)
+                then_guards = frozenset(set(guards).union(guarded))
+                if len(children) >= 2:
+                    traverse(children[1], then_guards)
+                if len(children) >= 3:
+                    traverse(children[2], guards)
+                for extra in children[3:]:
+                    traverse(extra, guards)
+                return
+
+            for child in node.get_children():
+                traverse(child, child_guard_context)
+
+        traverse(cursor, frozenset())
 
         if allocation_calls > free_calls:
             issues.append(self._build_leak_issue(cursor, allocation_calls, free_calls))
@@ -315,6 +346,63 @@ class MemorySafetyChecker(Checker):
                 names.add(child.spelling)
             names.update(self._collect_decl_ref_names(child))
         return names
+
+    def _extract_guarded_pointers(self, condition, pointer_vars: Set[str]) -> Set[str]:
+        if condition is None:
+            return set()
+        cindex = load_clang()
+
+        if condition.kind in {
+            cindex.CursorKind.PAREN_EXPR,
+            cindex.CursorKind.UNEXPOSED_EXPR,
+        }:
+            children = list(condition.get_children())
+            guards: Set[str] = set()
+            for child in children:
+                guards |= self._extract_guarded_pointers(child, pointer_vars)
+            return guards
+
+        if condition.kind == cindex.CursorKind.BINARY_OPERATOR:
+            tokens = list(collect_tokens(condition))
+            children = list(condition.get_children())
+            if "&&" in tokens and len(children) >= 2:
+                guards: Set[str] = set()
+                guards |= self._extract_guarded_pointers(children[0], pointer_vars)
+                guards |= self._extract_guarded_pointers(children[1], pointer_vars)
+                return guards
+            if "||" in tokens:
+                return set()
+            if "!" in tokens and tokens.count("!") == 1 and len(children) == 1:
+                return set()
+            if "!=" in tokens and len(children) >= 2:
+                left = children[0]
+                right = children[1]
+                name = self._resolve_decl_name(left) or self._first_decl_ref_name(left)
+                right_tokens = {tok for tok in collect_tokens(right)}
+                if name and name in pointer_vars and right_tokens & {"NULL", "0", "nullptr"}:
+                    return {name}
+                name = self._resolve_decl_name(right) or self._first_decl_ref_name(right)
+                left_tokens = {tok for tok in collect_tokens(left)}
+                if name and name in pointer_vars and left_tokens & {"NULL", "0", "nullptr"}:
+                    return {name}
+            return set()
+
+        if condition.kind == cindex.CursorKind.DECL_REF_EXPR:
+            if condition.spelling in pointer_vars:
+                return {condition.spelling}
+            return set()
+
+        if condition.kind == cindex.CursorKind.UNARY_OPERATOR:
+            tokens = list(collect_tokens(condition))
+            if tokens and tokens[0] == "!":
+                return set()
+            child = next(condition.get_children(), None)
+            return self._extract_guarded_pointers(child, pointer_vars)
+
+        guards: Set[str] = set()
+        for child in condition.get_children():
+            guards |= self._extract_guarded_pointers(child, pointer_vars)
+        return guards
 
     def _build_null_deref_issue(self, cursor, name: str) -> Issue:
         file_path, line, column = cursor_location(cursor)
